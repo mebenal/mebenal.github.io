@@ -1,0 +1,42 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Ebenal</title>
+    <script>
+        function lastModified() {
+            document.getElementById("lastModified").innerHTML = document.lastModified
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body onlaod="lastModified()">
+    <div id="content">
+        <header>
+            <div class="nameBox">
+                <h1>Michael B. Ebenal</h1>
+            </div>
+        </header>
+        <main>
+            <div class="courseAssignments">
+                <h2>CIT 230: Assignment Portal</h2>
+                <hr>
+                <ul class="courseAssignmentList">
+                    <li id="calItem1">Lesson 02: <a href="/index.html">Assignment Link</a></li>
+                    <li id="calItem2">Lesson 03: <a href="/index.html">Assignment Link</a></li>
+                    <li id="calItem3">Lesson 04: <a href="/index.html">Link</a> | <a href="/index.html">Link</a></li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <p>&copy; 2021 | Michael B Ebenal | Idaho | Brigham Young University - Idaho</p>
+                <p id="lastModified"></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
