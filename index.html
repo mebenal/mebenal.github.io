@@ -1,20 +1,86 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Ebenal</title>
-    <script>
-        function lastModified() {
-            document.getElementById("lastModified").innerHTML = document.lastModified
-        }
-    </script>
+    <meta name="description" content="Micael Ebenal's assignment portal for the Winter 2021 semester WDD-230: Web Frontend Development course at Brigham Young University - Idaho"> 
     <style>
+        @import url(https://fonts.googleapis.com/css?family=Bitter|Raleway&display=swap);
 
+        :root {
+            --primary-color: #FDB833;
+
+            --headline-color-on-white: #424B54;  /* headlines on a white background */ 
+            --headline-color-on-color: white; /* headlines on a colored background */ 
+            --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+            --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+            --paragraph-background-color: black;
+
+            --heading-font: 'Bitter', serif;
+            --paragraph-font: 'Raleway', sans-serif;
+            }
+
+        img {
+            max-width: 100%;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            color: var(--headline-color-on-white)
+        }
+
+        p, ul {
+            font-family: var(--paragraph-font);
+            color: var(--paragraph-color-on-white);
+        }
+
+        header, footer {
+            padding: 1em;
+            border: none;
+            border-radius: 15px;
+            text-align: center;
+            color: var(--paragraph-color-on-color);
+            background-color: var(--primary-color);
+        }
+
+        header > div > h1 {
+            font-size: 50px;
+        }
+
+        .courseAssignments {
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+
+        .courseAssignments > h2 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 35px;
+        }
+
+        .courseAssignments > ul > li {
+            padding-top: 5px;
+            font-size: 20px;
+        }
+
+        #mainImg {
+            float: right;
+            width: 25%;
+            margin-top: 1%;
+            margin-right: 1%;
+            border-radius: 0 15px 0 0;
+            box-shadow: 5px 5px 20px #424B54;
+        }
+
+        #lastModified {
+            color: white;
+        }
     </style>
 </head>
-<body onlaod="lastModified()">
+<body>
     <div id="content">
+        <img id="mainImg" src="img1.jpg" alt="Michael Ebenal">
         <header>
             <div class="nameBox">
                 <h1>Michael B. Ebenal</h1>
@@ -33,10 +99,16 @@
         </main>
         <footer>
             <div class="footer">
-                <p>&copy; 2021 | Michael B Ebenal | Idaho | Brigham Young University - Idaho</p>
+                <p id="fullYear"> | Michael B Ebenal | Idaho | Brigham Young University - Idaho</p>
                 <p id="lastModified"></p>
             </div>
         </footer>
     </div>
 </body>
+<script>
+    let str = document.getElementById("fullYear").innerHTML;
+    let d = new Date();
+    document.getElementById("fullYear").innerHTML = "&copy; " + d.getFullYear() + str;
+    document.getElementById("lastModified").innerHTML = "Last Updated: " + document.lastModified;
+</script>
 </html>
