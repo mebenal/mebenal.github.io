@@ -6,10 +6,12 @@
     <title>Michael Ebenal</title>
     <meta name="description" content="Micael Ebenal's assignment portal for the Winter 2021 semester WDD-230: Web Frontend Development course at Brigham Young University - Idaho"> 
     <script>
-        let str = document.getElementById("fullYear").innerHTML;
-        let d = new Date();
-        document.getElementById("fullYear").innerHTML = "&copy; " + d.getFullYear() + str;
-        document.getElementById("lastModified").innerHTML = "Last Updated: " + document.lastModified;
+        function loadDates() {
+            let str = document.getElementById("fullYear").innerHTML;
+            let d = new Date();
+            document.getElementById("fullYear").innerHTML = "&copy; " + d.getFullYear() + str;
+            document.getElementById("lastModified").innerHTML = "Last Updated: " + document.lastModified;
+        }
     </script>
     <style>
         @import url(https://fonts.googleapis.com/css?family=Bitter|Raleway&display=swap);
@@ -84,7 +86,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="loadDates()">
     <div id="content">
         <img id="mainImg" src="img1.jpg" alt="Michael Ebenal">
         <header>
