@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Ebenal</title>
     <meta name="description" content="Micael Ebenal's assignment portal for the Winter 2021 semester WDD-230: Web Frontend Development course at Brigham Young University - Idaho"> 
+    <script>
+        let str = document.getElementById("fullYear").innerHTML;
+        let d = new Date();
+        document.getElementById("fullYear").innerHTML = "&copy; " + d.getFullYear() + str;
+        document.getElementById("lastModified").innerHTML = "Last Updated: " + document.lastModified;
+    </script>
     <style>
         @import url(https://fonts.googleapis.com/css?family=Bitter|Raleway&display=swap);
 
@@ -105,10 +111,5 @@
         </footer>
     </div>
 </body>
-<script>
-    let str = document.getElementById("fullYear").innerHTML;
-    let d = new Date();
-    document.getElementById("fullYear").innerHTML = "&copy; " + d.getFullYear() + str;
-    document.getElementById("lastModified").innerHTML = "Last Updated: " + document.lastModified;
-</script>
+
 </html>
