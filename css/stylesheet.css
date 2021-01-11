@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter|Raleway&display=swap);
+
+:root {
+    --primary-color: #FDD033;
+    --headline-color-on-white: #424B54;  /* headlines on a white background */ 
+    --headline-color-on-color: white; /* headlines on a colored background */ 
+    --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+    --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+    --paragraph-background-color: black;
+    --heading-font: 'Bitter', serif;
+    --paragraph-font: 'Raleway', sans-serif;
+    }
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white)
+}
+
+p, ul {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color-on-white);
+}
+
+header, footer {
+    padding: 1em;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--paragraph-color-on-color);
+    background-color: var(--primary-color);
+}
+
+header > h1 {
+    font-size: 50px;
+}
+
+main {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+main > h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 35px;
+}
+
+main > ul > li {
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+#mainImg {
+    float: right;
+    width: 25%;
+    margin-top: 1%;
+    margin-right: 1%;
+    border-radius: 0 15px 0 0;
+    box-shadow: 5px 5px 20px #424B54;
+}
+
+#lastModified {
+    color: #333333;
+}
