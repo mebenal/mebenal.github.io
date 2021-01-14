@@ -12,3 +12,14 @@ button .buttongray {
 .buttonOrange {
     background-color: #FFCF2D;
 }
+
+.box {
+    display:inline-block;
+    text-align: center;
+}
+
+#grid {
+    display:grid;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+}
