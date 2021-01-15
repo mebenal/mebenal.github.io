@@ -1,25 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400&display=swap');
-
-body {
-    background-color: #E7ECF2;
-    font-family: 'Merriweather Sans', sans-serif;
+:root {
+    --content-blue: #12aaeb;
+    --page-gray: #e9eef2;
+    --text-gray: #84919a;
+    --bottom-bar: #d1e8fa;
+    --orange-button: #ffcf2d;
+    --gray-button: #d8d8d8;
+    --bottom-bar-blue: #cfe9fa;
 }
 
-button .buttongray {
-    background-color: #D8D8D8;
+body {
+    background-color:var(--page-gray);
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    padding: .5em;
+    margin: 0;
+    color:var(--text-gray);
+    font-weight: 500;
+    font-size: 80%;
+    letter-spacing: 1px;
+}
+img {
+    padding-top: 5em;
+    padding-bottom: 1.5em;
+}
+
+b {
+    font-weight: 600;
+}
+.title > strong {
+    color:var(--content-blue);
+    font-size: 18px;
+    font-family: 'Raleway';
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+#box2 > p{
+    font-size: 90%;
+}
+.title {
+    padding:1em;
+}
+
+.buttongray {
+    background-color:var(--gray-button);
 }
 
 .buttonOrange {
-    background-color: #FFCF2D;
+    background-color:var(--orange-button);
 }
 
 .box {
-    display:inline-block;
     text-align: center;
+    background-color: white;
+    position:relative;
+    padding-bottom: .5em;
 }
 
 #grid {
     display:grid;
-    grid-template-columns: auto auto auto;
-    align-content: center;
+    grid-template-columns: auto 15em 17em 15em auto;
+    grid-template-rows: 3em auto 3em;
+    column-gap: 3em;
+    padding: 4em;
+    
+}
+
+.bottomBox {
+    height: .5em;
+    width:100%;
+    background-color:var(--bottom-bar-blue);
+    position: absolute;
+    bottom:0;
+    width:100%;
+}
+
+#blueBox {
+    height: 3em;
+    background-color:var(--content-blue);
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#blueBox > p {
+    color:white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#box1 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+}
+#box2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+}
+#box3 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
 }
