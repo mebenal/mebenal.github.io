@@ -16,6 +16,14 @@ body {
     margin: auto;
 }
 
+header, footer {
+    padding: .5em;
+    border: none;
+    text-align: center;
+    color: var(--paragraph-color-on-color);
+    background-color: var(--primary-color);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--headline-color-on-white)
@@ -28,12 +36,6 @@ p, a {
     margin-right: .5em;
 }
 
-.imgDiv {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-}
-
 img {
     display: block;
     width: 95%;
@@ -41,12 +43,12 @@ img {
     margin-right: auto;
 }
 
-header, footer {
-    padding: .5em;
-    border: none;
-    text-align: center;
-    color: var(--paragraph-color-on-color);
-    background-color: var(--primary-color);
+#grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    margin: 1em;
+    row-gap: 1em;
 }
 
 .gridObject {
@@ -56,7 +58,6 @@ header, footer {
     border-radius: 5px 5px 0px 0px;
     border-width: 1px;
     border-color: var(--dark-gray);
-
 }
 
 .boxTop {
@@ -69,12 +70,4 @@ header, footer {
 
 .boxTop > h3 {
     margin: 0;
-}
-
-#grid {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: auto auto auto;
-    margin: 1em;
-    row-gap: 1em;
 }

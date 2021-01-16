@@ -18,9 +18,10 @@ p {
     margin: 0;
     color:var(--text-gray);
     font-weight: 500;
-    font-size: 80%;
+    font-size: 84%;
     letter-spacing: 1px;
 }
+
 img {
     padding-top: 5em;
     padding-bottom: 1.5em;
@@ -29,6 +30,7 @@ img {
 b {
     font-weight: 600;
 }
+
 .title > strong {
     color:var(--content-blue);
     font-size: 18px;
@@ -37,18 +39,34 @@ b {
     letter-spacing: 1px;
 }
 #box2 > p{
-    font-size: 90%;
+    font-size: 100%;
+    padding:.65em
+}
+#box2 > .priceText {
+    padding: 0;
 }
 .title {
     padding:1em;
 }
 
-.buttongray {
+.buttonGray, .buttonOrange {
+    color: white;
+    box-shadow: 1px 1px 1px #bbbbbb, 1px 1px 1px inset #ffffff;
+    border: none;
+}
+
+.buttonGray {
     background-color:var(--gray-button);
+    padding: .5em 1.5em .5em 1.5em;
+    margin-bottom: 1.25em;
+    margin-top: 1.5em;
 }
 
 .buttonOrange {
     background-color:var(--orange-button);
+    padding: .75em 2em .75em 2em;
+    margin-bottom: 1.25em;
+    margin-top: 1.5em;
 }
 
 .box {
@@ -78,27 +96,31 @@ b {
 
 .bigNumber {
     font-weight: 800;
-    font-size: 200%;
+    font-size: 300%;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    line-height: 1;
-}
-
-.priceContainer {
-    
+    bottom:-.125em;
 }
 
 .price {
     color:var(--content-blue);
     font-weight: 400 !important;
     font-size: 150% !important;
-    line-height: 1;
-
+    position:relative;
+    top: -.25em;
+    padding-bottom: .25em;
 }
 .priceText {
     color:var(--content-blue);
+    padding: 0;
 }
+
+.dollarSign {
+    position: relative;
+    bottom: -.25em;
+}
+
 #blueBox {
     height: 3em;
     background-color:var(--content-blue);
