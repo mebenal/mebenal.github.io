@@ -1,0 +1,80 @@
+:root {
+    --primary-color: #FDD033;
+    --headline-color-on-white: #424B54;  /* headlines on a white background */ 
+    --headline-color-on-color: white; /* headlines on a colored background */ 
+    --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+    --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+    --paragraph-background-color: black;
+    --light-gray: #e0e0e0;
+    --dark-gray: #aaaaaa;
+    --heading-font: 'Bitter', serif;
+    --paragraph-font: 'Raleway', sans-serif;
+    }
+
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white)
+}
+
+p, a {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-font);
+    margin-left:.5em;
+    margin-right: .5em;
+}
+
+.imgDiv {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+img {
+    display: block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header, footer {
+    padding: .5em;
+    border: none;
+    text-align: center;
+    color: var(--paragraph-color-on-color);
+    background-color: var(--primary-color);
+}
+
+.gridObject {
+    background-color: var(--light-gray);
+    height: 100%;
+    border-style: solid;
+    border-radius: 5px 5px 0px 0px;
+    border-width: 1px;
+    border-color: var(--dark-gray);
+
+}
+
+.boxTop {
+    background-color: var(--primary-color);
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxTop > h3 {
+    margin: 0;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: auto auto auto;
+    margin: 1em;
+    row-gap: 1em;
+}

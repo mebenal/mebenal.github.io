@@ -76,6 +76,29 @@ b {
     width:100%;
 }
 
+.bigNumber {
+    font-weight: 800;
+    font-size: 200%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    line-height: 1;
+}
+
+.priceContainer {
+    
+}
+
+.price {
+    color:var(--content-blue);
+    font-weight: 400 !important;
+    font-size: 150% !important;
+    line-height: 1;
+
+}
+.priceText {
+    color:var(--content-blue);
+}
 #blueBox {
     height: 3em;
     background-color:var(--content-blue);
@@ -88,6 +111,9 @@ b {
     color:white;
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 700;
+    font-size: 95%;
+    letter-spacing: 1px;
 }
 #box1 {
     grid-column: 2 / 3;

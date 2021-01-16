@@ -1,0 +1,9 @@
+@media (min-width: 600px) {
+    #grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto ;
+        margin: 1em;
+        row-gap: 1em;
+        column-gap: 1.5em;
+    }
+}
