@@ -1,8 +1,7 @@
 :root {
-    --content-blue: #12aaeb;
     --page-gray: #e9eef2;
+    --content-blue: #12aaeb;
     --text-gray: #84919a;
-    --bottom-bar: #d1e8fa;
     --orange-button: #ffcf2d;
     --gray-button: #d8d8d8;
     --bottom-bar-blue: #cfe9fa;
@@ -14,9 +13,9 @@ body {
 }
 
 p {
+    color:var(--text-gray);
     padding: .5em;
     margin: 0;
-    color:var(--text-gray);
     font-weight: 500;
     font-size: 84%;
     letter-spacing: 1px;
@@ -31,49 +30,79 @@ b {
     font-weight: 600;
 }
 
-.title > strong {
-    color:var(--content-blue);
-    font-size: 18px;
-    font-family: 'Raleway';
-    font-weight: 800;
-    letter-spacing: 1px;
+.box {
+    position:relative;
+    background-color: white;
+    padding-bottom: .5em;
+    text-align: center;
 }
-#box2 > p{
-    font-size: 100%;
-    padding:.65em
-}
-#box2 > .priceText {
-    padding: 0;
-}
+
 .title {
     padding:1em;
 }
 
+.title > strong {
+    color:var(--content-blue);
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.price {
+    position:relative;
+    top: -.25em;
+    color:var(--content-blue);
+    padding-bottom: .25em;
+    font-weight: 400 !important;
+    font-size: 150% !important;
+}
+
+.bigNumber {
+    display: inline-block;
+    position: relative;
+    bottom:-.125em;
+    vertical-align: middle;
+    font-size: 300%;
+    font-weight: 800;
+}
+
+.priceText {
+    color:var(--content-blue);
+    padding: 0;
+}
+
+.dollarSign {
+    position: relative;
+    bottom: -.25em;
+}
+
 .buttonGray, .buttonOrange {
     color: white;
-    box-shadow: 1px 1px 1px #bbbbbb, 1px 1px 1px inset #ffffff;
     border: none;
+    box-shadow: 1px 1px 1px #bbbbbb, 1px 1px 1px inset #ffffff;
 }
 
 .buttonGray {
     background-color:var(--gray-button);
     padding: .5em 1.5em .5em 1.5em;
-    margin-bottom: 1.25em;
     margin-top: 1.5em;
+    margin-bottom: 1.25em;
 }
 
 .buttonOrange {
     background-color:var(--orange-button);
     padding: .75em 2em .75em 2em;
-    margin-bottom: 1.25em;
     margin-top: 1.5em;
+    margin-bottom: 1.25em;
 }
 
-.box {
-    text-align: center;
-    background-color: white;
-    position:relative;
-    padding-bottom: .5em;
+.bottomBox {
+    position: absolute;
+    bottom:0;
+    height: .5em;
+    width:100%;
+    background-color:var(--bottom-bar-blue);
 }
 
 #grid {
@@ -85,68 +114,44 @@ b {
     
 }
 
-.bottomBox {
-    height: .5em;
-    width:100%;
-    background-color:var(--bottom-bar-blue);
-    position: absolute;
-    bottom:0;
-    width:100%;
-}
-
-.bigNumber {
-    font-weight: 800;
-    font-size: 300%;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    bottom:-.125em;
-}
-
-.price {
-    color:var(--content-blue);
-    font-weight: 400 !important;
-    font-size: 150% !important;
-    position:relative;
-    top: -.25em;
-    padding-bottom: .25em;
-}
-.priceText {
-    color:var(--content-blue);
-    padding: 0;
-}
-
-.dollarSign {
-    position: relative;
-    bottom: -.25em;
-}
-
 #blueBox {
-    height: 3em;
-    background-color:var(--content-blue);
-    width: 100%;
     display:flex;
+    height: 3em;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    background-color:var(--content-blue);
 }
+
 #blueBox > p {
     color:white;
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 700;
     font-size: 95%;
+    font-weight: 700;
     letter-spacing: 1px;
 }
+
 #box1 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-
 }
+
 #box2 {
     grid-column: 3 / 4;
     grid-row: 1 / 4;
 }
+
 #box3 {
     grid-column: 4 / 5;
     grid-row: 2 / 3;
+}
+
+#box2 > p{
+    padding:.65em;
+    font-size: 100%;
+}
+
+#box2 > .priceText {
+    padding: 0;
 }
