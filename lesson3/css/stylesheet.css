@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #FDD033;
+    --secondary-color: #72A3FD;
+    --accent-color-one: #FDCC72;
+    --accent-color-two: #335EFD;
+    --headline-color: #191919;  /* headlines on a white background */ 
+    --paragraph-color: black; /* paragraph text on a white background */ 
+
+    --heading-font: 'Raleway', sans-serif;
+    --paragraph-font: 'Bitter', serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+header, footer {
+    max-width: 1200px;
+    padding: 1em;
+    margin: 1em;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--primary-color);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    gap: 1em;
+}
+
+#gridInd {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+#gridCol{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.colorBox {
+    height: 40%;
+    width: 50%;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    max-width: 1200px;
+    padding: 1em;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--headline-color);
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+p, a, li {
+    font-family: var(--paragraph-font);
+}
+
+img {
+    display: block;
+    width: 50%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+ul {
+    display: flex;
+    padding-left: 0;
+}
+
+li {
+    background-color: var(--secondary-color);
+    list-style-type: none;
+    flex-basis: 20%;
+    padding: .5em;
+    font-size: 20px;
+}
+
+li:hover {
+    background-color: var(--accent-color-two);
+}
+
+li:hover > a {
+    color: white;
+}
+
+.sectCol {
+    display: inline-block;
+    height: 25em;
+    align-content: center;
+}
+
+a, a:visited {
+    display: block;
+    color: var(--paragraph-color);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+footer > p > a, footer > p > a:visited {
+    display: inline;
+}
+
+section {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+}
+
+#sect1ind {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#sect2ind {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#sect3ind {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+#sect4ind {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#colBox1 {
+    background-color: var(--primary-color);
+}
+
+#colBox2 {
+    background-color: var(--secondary-color);
+}
+
+#colBox3 {
+    background-color: var(--accent-color-one);
+}
+
+#colBox4 {
+    background-color: var(--accent-color-two);
+}
