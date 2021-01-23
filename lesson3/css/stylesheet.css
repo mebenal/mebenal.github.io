@@ -104,6 +104,7 @@ li {
     flex-basis: 20%;
     padding: .5em;
     font-size: 20px;
+    font-weight: 400;
 }
 
 li:hover {
@@ -174,4 +175,51 @@ section {
 
 #colBox4 {
     background-color: var(--accent-color-two);
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: .5em;
+    background-color: #e0e0e0;
+    font-family: var(--paragraph-font);
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tabNav {
+    font-family: var(--paragraph-font);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#tabH1 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 40px;
+}
+
+#tabH2 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 35px;
+}
+
+#tabH3 {
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 30px;
+}
+
+#tabNav {
+    font-family: var(--paragraph-font);
+}
+
+#tarAud {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
 }
