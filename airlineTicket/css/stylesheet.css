@@ -1,0 +1,95 @@
+body {
+    background-color: #dad7d7;
+    display: flex;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans';
+}
+
+main {
+    border-radius: 20px;
+    background-color: #ffffff;
+    width: 32%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+main header {
+    border-radius: 20px;
+    margin-top: 0px;
+    font-size: 0.3em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+main header .delta {
+   margin-top: auto;
+   margin-bottom: auto; 
+}
+
+main header .delta p{
+     
+ }
+
+main header img {
+    width: 50%;
+    margin-left: 3%;
+}
+
+main header .name {
+    top: auto;
+    bottom: auto;
+    text-align: right;
+    padding: 1em;
+    font-size: 2em;
+}
+
+main .city-info {
+    background-color: #001A35;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+main .city-info p {
+    color: #2A425C;
+    font-size: 0.3em;
+}
+
+main .city-info img {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+main .flight-info {
+    background-color: #F1F1F1;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    color: #212A33;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+main .flight-info h6 {
+    margin-bottom: 0;
+    padding-top: 0;
+    font-size: .5em;
+}
+
+main .flight-info p {
+    margin-top: 0;
+}
+
+main footer {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.centerImg {
+    margin-left: auto;
+    margin-right: auto;
+}

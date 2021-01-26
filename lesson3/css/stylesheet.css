@@ -109,6 +109,7 @@ li {
 
 li:hover {
     background-color: var(--accent-color-two);
+    transition: .7s;
 }
 
 li:hover > a {
