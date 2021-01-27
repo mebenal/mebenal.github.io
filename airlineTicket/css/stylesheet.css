@@ -18,23 +18,17 @@ main {
 main header {
     border-radius: 20px;
     margin-top: 0px;
-    font-size: 0.3em;
+    margin-bottom: 6px;
+    font-size: 0.25em;
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
 main header .delta {
    margin-top: auto;
-   margin-bottom: auto; 
-}
-
-main header .delta p{
-     
- }
-
-main header img {
-    width: 50%;
-    margin-left: 3%;
+   margin-bottom: auto;
+   margin-left: 2em;
+   margin-top: 4em; 
 }
 
 main header .name {
@@ -42,42 +36,82 @@ main header .name {
     bottom: auto;
     text-align: right;
     padding: 1em;
-    font-size: 2em;
+    font-size: 2.5em;
+    padding-top: 16px;
+    margin-right: 8px;
+    color: #0b3663;
+    font-weight: 200;
 }
 
 main .city-info {
-    background-color: #001A35;
+    background-color: #001b36;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     text-align: center;
+    text-justify: center;
     color: #FFFFFF;
 }
 
 main .city-info p {
-    color: #2A425C;
-    font-size: 0.3em;
+    color: #40658d;
+    font-size: 0.5em;
 }
 
-main .city-info img {
-    margin-top: auto;
-    margin-bottom: auto;
+#logo p{
+    margin-top: .5em;
+    padding-left: 1em;
+    font-size: 1.9em;
+    color: #0b3663;
+}
+
+#logo {
+    width: 100%;
+    margin-left: 8%;
+}
+
+#logo img {
+    margin-top: 4em;
+    margin-left: 2em;
+    width: 50%;
+}
+
+.top-city {
+    margin-top: 2.5em;
+    margin-bottom: 1.75em;
+}
+
+.bottom-city {
+    margin-bottom: 2.5em;
+
+}
+
+main .city-info h1 {
+    padding: 0;
+    margin:0;
+}
+
+#barcode {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 90%;
 }
 
 main .flight-info {
     background-color: #F1F1F1;
     display: grid;
-    grid-template-rows: 33% 33% 33%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
     text-align: center;
-    color: #212A33;
+    color: #0b3663;
     padding-bottom: 0;
     margin-bottom: 0;
 }
 
 main .flight-info h6 {
-    margin-bottom: 0;
-    padding-top: 0;
+    margin-bottom: 3px;
+    padding-top: 3px;
     font-size: .5em;
+    font-weight: 800;
 }
 
 main .flight-info p {
@@ -87,9 +121,11 @@ main .flight-info p {
 main footer {
     margin-bottom: 0px;
     text-align: center;
+    font-size: 0.7em;
+    padding: 25px;
+    font-weight: 200;
 }
 
 .centerImg {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }

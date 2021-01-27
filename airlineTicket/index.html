@@ -6,7 +6,7 @@
     <title>Michael Ebenal</title>
     <meta name="description" content="Micael Ebenal's assignment portal for the Winter 2021 semester WDD-230: Web Frontend Development course at Brigham Young University - Idaho"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel='stylesheet' href='css/stylesheet.css'>
     <script src='scripts/page.js'></script>
@@ -14,7 +14,7 @@
 <body onload="loadDates()">
     <main>
         <header>
-            <div class="delta">
+            <div id="logo">
                 <img src="images/delta.jpg">
                 <p>Mobile Boarding Pass</p>
             </div>
@@ -25,17 +25,17 @@
 
         <div class="city-info">
             <div class="city">
-                <p>Departs 12:45 PM</p>
+                <p class="top-city">Departs 12:45 PM</p>
                 <h1>DEN</h1>
-                <p>Denver</p>    
+                <p class="bottom-city">Denver</p>    
             </div>
 
             <img class="centerImg" src="images/Airplane.png">
             
             <div class="city">
-                <p>Departs 12:45 PM</p>
+                <p class="top-city">Departs 12:45 PM</p>
                 <h1>BOS</h1>
-                <p>Boston</p>    
+                <p class="bottom-city">Boston</p>    
             </div>
         </div>
 
@@ -70,7 +70,7 @@
         </div>
 
         <footer>
-            <img class="centerImg" src="images/barcode.png">
+            <img id="barcode" class="centerImg" src="images/barcode.png">
             <p>Thank you for flying with Delta!</p>
         </footer>
     </main>
