@@ -33,6 +33,7 @@ header {
 
 .siteMotto {
     margin: 0;
+    margin-left: .5rem;
     font-size: .75rem;
 }
 
@@ -40,17 +41,18 @@ header {
     display: flex;
 }
 
-.logoAndMotto {
+.titleAndMotto {
     margin: .5rem .2rem;
     flex-grow: 1;
 }
 
 .siteTitle {
     margin: 0;
+    font-size: 1.2rem;
 }
 
 .siteLogo {
-    width: 20%;
+    width: 25%;
     margin: .5rem;
 }
 
@@ -78,7 +80,7 @@ nav ul {
 
 #navigation a:link, #navigation a:visited, #navigation a:hover, #navigation a:active, .ham {
     display: block;
-    padding: .75em;
+    padding: .75rem;
     text-align: left;
     text-decoration: none;
     color: var(--headline-color);
