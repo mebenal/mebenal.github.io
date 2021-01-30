@@ -293,12 +293,16 @@ iframe {
 
     .footerBar {
         background-color: var(--accent-color-two);
+        height: 20px;
     }
 
     .footerBar p {
         display: inline;
-        margin-left: .5rem;
-        margin-right: .5rem;
+        color: white;
+        margin: 0 .5rem;
     }
 
+    .footerBar p a {
+        color: white;
+    }
 }
