@@ -1,7 +1,11 @@
 window.addEventListener('load', ()=>{
     let d = new Date();
+
     document.getElementById("fullYear").innerHTML = "&copy; " + d.getFullYear();
-    document.getElementById("lastModified").innerHTML = "Last Updated: " + document.lastModified;
+    document.getElementById("lastModified").innerHTML = d.toLocaleDateString('en-US', {weekday: 'long'}) + ', ' + 
+                                                        d.getDay() + ' ' + 
+                                                        d.toLocaleDateString('en-US', {month: 'long'}) + ' ' +
+                                                        d.getFullYear();
 
     const hambutton = document.querySelector(".ham");
     const mainnav = document.querySelector("#navigation");

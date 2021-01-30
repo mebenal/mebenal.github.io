@@ -23,6 +23,7 @@ p, a, li {
 img {
     width: 100%;
 }
+
 /* Header Styles */
 header {
     display: grid;
@@ -113,18 +114,6 @@ footer {
     background-color: var(--secondary-color);
 }
 
-#map {
-    height: 75%;
-    width: 85%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-iframe {
-    height: 100%;
-    width: 100%;
-}
-
 .contact {
     padding-top: 5%;
     padding-left: 10%;
@@ -133,10 +122,12 @@ iframe {
 .contact h2 {
     margin-top: 0;
 }
+
 .space {
     display: inline-block;
     width: 1rem;   
 }
+
 .contactIcons {
     padding: 0;
     margin: 0;
@@ -149,6 +140,18 @@ iframe {
 
 .socialMediaIcons {
     display: none;
+}
+
+#map {
+    height: 75%;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
 }
 
 .footerBar {
@@ -196,14 +199,6 @@ iframe {
         font-size: 20px;
         font-weight: 500;
     }
-    
-    header {
-        max-width: 100%;
-    }
-
-    main {
-        margin: 0;
-    }
 
     #navigation {
         grid-template-columns: repeat(6, auto);
@@ -220,38 +215,16 @@ iframe {
     #navigation a:link, #navigation a:visited, #navigation a:hover, #navigation a:active {
         text-align: center;
     }
-
+  
     #navigation a:hover {
         background-color: var(--accent-color-two);
         transition: .7s;
         color: white;
     }
-}
-
-@media only screen and (min-width:75em) {
-    header section, header nav ul {
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    main {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    main {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    body {
-        background-color: var(--accent-color-one);
-    }
 
     .grid {
-        width: 1200px;
+        width: 100%;
+        max-width: 1200px;
         display:grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto;
@@ -264,7 +237,7 @@ iframe {
         grid-row: 1 / 2;
         margin-top: auto;
         margin-bottom: auto;
-        height: 20rem;
+        height: 15rem;
         padding: 1rem 0;
     }
 
@@ -279,7 +252,6 @@ iframe {
     
     .socialMediaIcons {
         display: flex;
-
     }
 
     .socialMediaIcons img {
@@ -288,7 +260,6 @@ iframe {
         width: 3rem;
         margin-left: .25rem;
         margin-right: .25rem;
-        
     }
 
     .footerBar {
@@ -304,5 +275,21 @@ iframe {
 
     .footerBar p a {
         color: white;
+    }
+}
+
+@media only screen and (min-width:75em) {
+    header section, header nav ul, main {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        background-color: var(--accent-color-one);
+    }
+
+    main {
+        padding-top: 27px;
     }
 }
