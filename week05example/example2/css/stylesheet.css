@@ -1,7 +1,7 @@
 main {
     display: grid;
     grid-template-columns: 1fr 60% 1fr;
-    grid-template-rows: 15% 1fr 15%;
+    grid-template-rows: 15% 1fr 17%;
     width: 750px;
 }
 
@@ -17,17 +17,18 @@ main {
     grid-row: 1 / -1;
     grid-column: 1 / -1;
     z-index: 2;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(5,113,188,1) 100%);
+    background: rgb(5,113,188);
+    background: linear-gradient(0deg, rgba(5,113,188,1) 0%, rgba(5,113,188,.8) 25%, rgba(0,230,255,0.4) 40%, rgba(0,0,0,0) 70%);
 }
 
 #text {
-    display: inline;
+    display: flex;
+    flex-basis: 0;
+    flex-flow: column;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     z-index: 3;
-    vertical-align: text-bottom;
-    text-align: left;
+    justify-content: flex-end;
 }
 
 #smallImg {
@@ -43,7 +44,7 @@ main {
 }
 
 #smallImg img {
-    margin: 0 .5rem;
+    margin: 0 .4rem;
     opacity: .5;
 }
 
@@ -64,5 +65,23 @@ main {
 }
 
 h1, p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    letter-spacing: .015rem;
+    margin-left: 3rem;
+    margin-right: 4.5rem;
     color: white;
+    justify-content: flex-end;
+}
+
+h1 {
+    font-size: 4.25em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+p {
+    font-size: 1.90em;
+    line-height: 1.32;
+    margin-bottom: 1rem;
 }
