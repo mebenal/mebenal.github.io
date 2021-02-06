@@ -1,310 +1,282 @@
 :root {
-    --primary-color: #FDD033;
-    --secondary-color: #72A3FD;
-    --accent-color-one: #FDCC7266;
-    --accent-color-two: #335EFD;
-    --headline-color: #191919;
-    --paragraph-color: black; 
+  --primary-color: #FDD033;
+  --secondary-color: #72A3FD;
+  --accent-color-one: #FDCC7266;
+  --accent-color-two: #335EFD;
+  --headline-color: #191919;
+  --paragraph-color: black; 
 
-    --heading-font: 'Raleway', sans-serif;
-    --paragraph-font: 'Bitter', serif;
+  --heading-font: 'Raleway', sans-serif;
+  --paragraph-font: 'Bitter', serif;
 }
 
-#gray {
-    z-index: 2;
-    position: fixed;
-    top: 0;
-    display: block;
-    background-color: #cccccc88;
-    width: 100vw;
-    height: 100vh;
-}
 /* General Styles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--headline-color);
+  font-family: var(--heading-font);
+  color: var(--headline-color);
 }
 
 p, a, li {
-    font-family: var(--paragraph-font);
+  font-family: var(--paragraph-font);
 }
 img {
-    width: 100%;
+  width: 100%;
 }
 
 /* Header Styles */
 header {
-    display: grid;
-    grid-template-rows: auto auto;
-    background-color: var(--primary-color);
+  display: grid;
+  grid-template-rows: auto auto;
+  background-color: var(--primary-color);
 }
 
 .siteIntro {
-    display: flex;
+  display: flex;
 }
 
 .siteLogo {
-    width: 25%;
-    max-width: 100px;
-    margin: .5rem;
+  width: 25%;
+  max-width: 100px;
+  margin: .5rem;
 }
 
 .titleAndMotto {
-    margin: .5rem 0;
-    flex-grow: 1;
+  margin: .5rem 0;
+  flex-grow: 1;
 }
 
 .siteTitle {
-    margin: 0;
+  margin: 0;
 }
 
 .siteMotto {
-    margin: 0;
-    margin-left: .5rem;
+  margin: 0;
+  margin-left: .5rem;
 }
 
 .ham {
-    font-size: 1.5rem;
-    margin-top: auto;
-    margin-bottom: auto;
+  font-size: 1.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-#banner {
-    display: block;
-    position: fixed;
-    top: 50px;
-    width: 50%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
-    font-weight: 500;
-    font-size: 2rem;
-    background-color: var(--accent-color-two);
-    text-align: center;
-    padding: 2rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    z-index: 3;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-}
+
 
 /* Responsive Nav Styles */
 nav {
-    margin: 0 auto;
-    width: 100%;
-    margin: 0;
-    background-color: var(--secondary-color);
+  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  background-color: var(--secondary-color);
 }
 
 nav ul {
-    margin: 0;
+  margin: 0;
 }
 
 #navigation {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: auto;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto;
 }
 
 #navigation li {
-    display: none;
-    background-color: var(--secondary-color);
+  display: none;
+  background-color: var(--secondary-color);
 }
 
 #navigation a:link, #navigation a:visited, #navigation a:hover, #navigation a:active, .ham {
-    display: block;
-    padding: .75rem;
-    text-align: left;
-    text-decoration: none;
-    font-family: var(--heading-font);
-    color: var(--headline-color);
-    font-weight: 700;
+  display: block;
+  padding: .75rem;
+  text-align: left;
+  text-decoration: none;
+  font-family: var(--heading-font);
+  color: var(--headline-color);
+  font-weight: 700;
 }
 
 #navigation a:hover {
-    color: var(--headline-color);
+  color: var(--headline-color);
 }
 
 #navigation.responsive li {
-    display: block;
-    border-top: 1px solid var(--accent-color-two);
+  display: block;
+  border-top: 1px solid var(--accent-color-two);
 }
 
 /* Main Styles */
 main {
-    background-color: white;
+  background-color: white;
 }
 
 /* Footer Styles */
 footer {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 .contact {
-    padding-top: 5%;
-    padding-left: 10%;
+  padding-top: 5%;
+  padding-left: 10%;
 }
 
 .contact h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .space {
-    display: inline-block;
-    width: 1rem;   
+  display: inline-block;
+  width: 1rem;   
 }
 
 .contactIcons {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .contactIcons li:first-child {
-    display: none;
+  display: none;
 }
 
 .socialMediaIcons {
-    display: none;
+  display: none;
 }
 
 #map {
-    height: 75%;
-    width: 85%;
-    margin: 0 auto;
-    padding: 0;
+  height: 75%;
+  width: 85%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 iframe {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .footerBar {
-    text-align: center;
+  text-align: center;
 }
 
 .footerBar p {
-    margin: 0;
+  margin: 0;
 }
 
 .footerBar p a {
-    text-decoration: none;
-    color: var(--headline-color);
+  text-decoration: none;
+  color: var(--headline-color);
 }
 
 @media only screen and (max-width:34.5em) {
-    h1 {
-        font-size: 6.25vw;
-        font-weight: 700;
-    }
+  h1 {
+    font-size: 6.25vw;
+    font-weight: 700;
+  }
     
-    h2 {
-        font-size: 5vw;
-        font-weight: 600;
-    }
+  h2 {
+    font-size: 5vw;
+    font-weight: 600;
+  }
     
-    h3 {
-        font-size: 3.75vw;
-        font-weight: 500;
-    }
+  h3 {
+    font-size: 3.75vw;
+    font-weight: 500;
+  }
 }
 
 @media only screen and (min-width:34.5em) {
-    h1 {
-        font-size: 40px;
-        font-weight: 700;
-    }
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
 
-    h2 {
-        font-size: 30px;
-        font-weight: 600;
-    }
-    
-    h3 {
-        font-size: 20px;
-        font-weight: 500;
-    }
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
 
-    #navigation {
-        grid-template-columns: repeat(6, auto);
-    }
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+  }
 
-    #navigation li {
-        display: block;
-    }
+  #navigation {
+    grid-template-columns: repeat(6, auto);
+  }
 
-    .ham {
-        display: none;
-    }
+  #navigation li {
+    display: block;
+  }
 
-    #navigation a:link, #navigation a:visited, #navigation a:hover, #navigation a:active {
-        text-align: center;
-    }
+  .ham {
+    display: none;
+  }
+
+  #navigation a:link, #navigation a:visited, #navigation a:hover, #navigation a:active {
+    text-align: center;
+  }
   
-    #navigation a:hover {
-        background-color: var(--accent-color-two);
-        transition: .7s;
-        color: white;
-    }
+  #navigation a:hover {
+    background-color: var(--accent-color-two);
+    transition: .7s;
+    color: white;
+  }
 
-    .grid {
-        width: 100%;
-        max-width: 1200px;
-        display:grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .grid {
+    width: 100%;
+    max-width: 1200px;
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    #map {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        margin-top: auto;
-        margin-bottom: auto;
-        height: 15rem;
-        padding: 1rem 0;
-    }
+  #map {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 15rem;
+    padding: 1rem 0;
+  }
 
-    .contact {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-    }
+  .contact {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
 
-    .contact li:first-child {
-        display: block;
-    }
+  .contact li:first-child {
+    display: block;
+  }
     
-    .socialMediaIcons {
-        display: flex;
-    }
+  .socialMediaIcons {
+    display: flex;
+  }
 
-    .socialMediaIcons img {
-        display: block;
-        height: 3rem;
-        width: 3rem;
-        margin-left: .25rem;
-        margin-right: .25rem;
-    }
+  .socialMediaIcons img {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    margin-left: .25rem;
+    margin-right: .25rem;
+  }
 
-    .footerBar {
-        background-color: var(--accent-color-two);
-        height: 20px;
-    }
+  .footerBar {
+    background-color: var(--accent-color-two);
+    height: 20px;
+  }
 
-    .footerBar p {
-        display: inline;
-        color: white;
-        margin: 0 .5rem;
-    }
+  .footerBar p {
+    display: inline;
+    color: white;
+    margin: 0 .5rem;
+  }
 
-    .footerBar p a {
-        color: white;
-    }
+  .footerBar p a {
+    color: white;
+  }
 }
 
 @media only screen and (min-width:75em) {
