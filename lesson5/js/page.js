@@ -14,5 +14,9 @@ window.addEventListener('load', () => {
     document.getElementById('gray').style.display = 'none';
   });
 
+  if (d.getDay() === 5) {
+    document.getElementById('banner').style.display = 'grid';
+  }
+
   window.onresize = () => { if (window.innerWidth > 552) mainnav.classList.remove('responsive'); };
 });

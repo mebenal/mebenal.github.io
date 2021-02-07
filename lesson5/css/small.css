@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #FDD033;
+  --primary-color: #FDD033AA;
   --secondary-color: #72A3FD;
   --accent-color-one: #FDCC7266;
   --accent-color-two: #335EFD;
@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 p, a, li {
   font-family: var(--paragraph-font);
 }
+
 img {
   width: 100%;
 }
@@ -60,6 +61,24 @@ header {
   margin-bottom: auto;
 }
 
+/* Top banner */
+#banner {
+  width: 100%;
+  text-align: center;
+  background-color: var(--accent-color-one);
+  margin: 0;
+  padding: 0;
+}
+#banner li:last-child {
+  display: none;
+}
+#banner li {
+  list-style: none;
+}
+#banner li p {
+  font-size: 3vw;
+  margin: 0;
+}
 
 
 /* Responsive Nav Styles */
@@ -105,9 +124,71 @@ nav ul {
   border-top: 1px solid var(--accent-color-two);
 }
 
+#navigation li .active {
+  background-color: #335EFD55;
+  text-decoration: underline;
+}
+
 /* Main Styles */
 main {
   background-color: white;
+}
+
+main h1 {
+  margin: 1rem .5rem;
+}
+
+.weatherSummary{
+  background-color: var(--primary-color);
+}
+
+.weatherSummary img {
+  margin: 0;
+}
+
+.weatherSummary h2 {
+  margin: 1rem
+}
+
+.weatherSummary p {
+  margin: 0 1rem;
+  padding-bottom: .5rem;
+}
+
+.fiveDayForecast {
+  background-color: var(--primary-color);
+  height: 100%;
+}
+
+.fiveDayForecast h1 {
+  background-color: #FDCC72ff;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.fiveDayForecast ul {
+  display: none;
+}
+
+
+
+.fiveDayForecast h2 {
+  margin: .5rem 3vw;
+}
+
+.fiveDayForecast p {
+  margin: 0 3vw;
+}
+
+.fiveDayForecast div img:first-child {
+  display: none;
+}
+
+.fiveDayForecast div img:last-child {
+  display: inline-block;
+  width: 94%;
+  margin: 3%;
 }
 
 /* Footer Styles */
@@ -201,6 +282,33 @@ iframe {
     font-weight: 500;
   }
 
+  p {
+    font-size: 15px;
+  }
+
+  #banner {
+    display: none;
+    grid-template-columns: 95% 5%;
+  }
+
+  #banner li:last-child {
+    display: block;
+  }
+
+  #banner li p, #banner li a {
+    display: block;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  #banner li a {
+    font-size: 1.75rem;
+    padding: 0;
+    margin: 0;
+  }
+
   #navigation {
     grid-template-columns: repeat(6, auto);
   }
@@ -209,6 +317,10 @@ iframe {
     display: block;
   }
 
+  #navigation a:link, #navigation a:visited, #navigation a:hover, #navigation a:active {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .ham {
     display: none;
   }
@@ -280,17 +392,106 @@ iframe {
 }
 
 @media only screen and (min-width:75em) {
-    header section, header nav ul, main {
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  header section, header nav ul, main {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    body {
-        background-color: var(--accent-color-one);
-    }
+  #banner {
+    grid-template-columns: 1fr 1140px 60px 1fr;
+  }
 
-    main {
-        padding-top: 27px;
-    }
+  #banner li p {
+    font-size: 1em;
+    margin: 6.5px 0;
+  }
+
+  #banner li:first-child {
+    grid-column: 2 / 3;
+  }
+
+  #banner li:last-child {
+    grid-column: 3 / 4;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  main {
+    padding-top: 27px;
+  }
+
+  .weatherSummary {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    grid-template-rows: auto;
+  }
+
+  .weatherSummary img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 1;
+  }
+
+  .weatherSummary div {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 2;
+    width: 20rem;
+    background-color: var(--secondary-color);
+    margin: 1rem;
+  }
+
+  .fiveDayForecast {
+    display: grid;
+    background-color: white;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  .fiveDayForecast h1 {
+    background-color: white;
+    text-align: left;
+    padding: 1rem .5rem;
+  }
+
+  .fiveDayForecast ul {
+    display: flex;
+    background-color: var(--primary-color);
+    justify-content: space-around;
+    margin: 0;
+    padding: .5rem;
+    margin-bottom: 2rem;
+  }
+
+  .fiveDayForecast ul li {
+    list-style: none;
+  }
+
+  .fiveDayForecast div {
+    position: relative;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+
+  .fiveDayForecast h2, .fiveDayForecast p {
+    display: block;
+  }
+
+  .fiveDayForecast h2 {
+    margin: 1rem
+  }
+
+  .fiveDayForecast div img:first-child {
+    display: block;
+    float: right;
+    width: 200px;
+    margin: 3%;
+  }
+  
+  .fiveDayForecast div img:last-child {
+    display: none;
+  }
 }
