@@ -440,7 +440,7 @@ iframe {
     grid-row: 1 / 2;
     z-index: 2;
     width: 20rem;
-    background-color: var(--secondary-color);
+    background-color: #72a3fdaa;
     margin: 1rem;
   }
 
