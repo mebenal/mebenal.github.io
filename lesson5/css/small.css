@@ -161,7 +161,7 @@ main h1 {
 }
 
 .fiveDayForecast h1 {
-  background-color: #FDCC72ff;
+  background-color: #72A3FD;
   margin: 0;
   padding: 2rem;
   text-align: center;
@@ -170,8 +170,6 @@ main h1 {
 .fiveDayForecast ul {
   display: none;
 }
-
-
 
 .fiveDayForecast h2 {
   margin: .5rem 3vw;
@@ -417,10 +415,6 @@ iframe {
 
   body {
     background-color: white;
-  }
-
-  main {
-    padding-top: 27px;
   }
 
   .weatherSummary {
