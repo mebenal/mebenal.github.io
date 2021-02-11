@@ -64,18 +64,19 @@ header {
 /* Top banner */
 #banner {
   width: 100%;
+  display: none;
+  grid-template-columns: 95% 5%;;
   text-align: center;
   background-color: var(--accent-color-one);
   margin: 0;
   padding: 0;
 }
-#banner li:last-child {
-  display: none;
-}
+
 #banner li {
   list-style: none;
 }
-#banner li p {
+#banner li p, #banner li a {
+  text-decoration: none;
   font-size: 3vw;
   margin: 0;
 }
@@ -116,7 +117,9 @@ nav ul {
 }
 
 #navigation a:hover {
-  color: var(--headline-color);
+  background-color: var(--accent-color-two);
+  transition: .7s;
+  color: white;
 }
 
 #navigation.responsive li {
@@ -296,7 +299,6 @@ iframe {
   #banner li p, #banner li a {
     display: block;
     font-size: 1rem;
-    text-decoration: none;
     margin-top: 7px;
     margin-bottom: 7px;
   }
@@ -325,12 +327,6 @@ iframe {
 
   #navigation a:link, #navigation a:visited, #navigation a:hover, #navigation a:active {
     text-align: center;
-  }
-  
-  #navigation a:hover {
-    background-color: var(--accent-color-two);
-    transition: .7s;
-    color: white;
   }
 
   .grid {
