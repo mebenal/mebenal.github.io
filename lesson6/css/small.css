@@ -329,6 +329,69 @@ iframe {
     text-align: center;
   }
 
+  .weatherSummary {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    grid-template-rows: auto auto;
+  }
+
+  .weatherSummary img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 1;
+  }
+
+  .weatherSummary div {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 2;
+    width: 19rem;
+    background-color: #72a3fdcc;
+    margin: 4vw;
+    padding: 1rem;
+  }
+
+  .fiveDayForecast ul {
+    display: flex;
+    background-color: var(--primary-color);
+    justify-content: space-around;
+    margin: 0;
+    padding: .5rem;
+    margin-bottom: 1rem;
+  }
+
+  .fiveDayForecast ul li {
+    list-style: none;
+  }
+
+  .fiveDayForecast {
+    display: grid;
+    background-color: white;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  
+  .fiveDayForecast div {
+    position: relative;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+
+  .fiveDayForecast h1 {
+    background-color: white;
+    text-align: left;
+    padding: 1rem .5rem;
+  }
+
+  .fiveDayForecast h2, .fiveDayForecast p {
+    display: block;
+  }
+
+  .fiveDayForecast h2 {
+    margin: 1rem
+  }
+
   .grid {
     width: 100%;
     max-width: 1200px;
@@ -411,67 +474,6 @@ iframe {
 
   body {
     background-color: white;
-  }
-
-  .weatherSummary {
-    display: grid;
-    grid-template-columns: 1fr 1.25fr;
-    grid-template-rows: auto;
-  }
-
-  .weatherSummary img {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    z-index: 1;
-  }
-
-  .weatherSummary div {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    z-index: 2;
-    width: 20rem;
-    background-color: #72a3fdaa;
-    margin: 1rem;
-  }
-
-  .fiveDayForecast {
-    display: grid;
-    background-color: white;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-  }
-
-  .fiveDayForecast h1 {
-    background-color: white;
-    text-align: left;
-    padding: 1rem .5rem;
-  }
-
-  .fiveDayForecast ul {
-    display: flex;
-    background-color: var(--primary-color);
-    justify-content: space-around;
-    margin: 0;
-    padding: .5rem;
-    margin-bottom: 2rem;
-  }
-
-  .fiveDayForecast ul li {
-    list-style: none;
-  }
-
-  .fiveDayForecast div {
-    position: relative;
-    background-color: var(--primary-color);
-    margin-bottom: 2rem;
-  }
-
-  .fiveDayForecast h2, .fiveDayForecast p {
-    display: block;
-  }
-
-  .fiveDayForecast h2 {
-    margin: 1rem
   }
 
   .fiveDayForecast div img:first-child {
