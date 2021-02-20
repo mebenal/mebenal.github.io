@@ -6,10 +6,9 @@
   <title>Weather One Preston</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&family=Raleway:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="css/small.css">
   <script src="js/page.js"></script>
-  <script src='js/weather.js'></script>
 </head>
 <body>
   <ul id="banner">
@@ -40,52 +39,57 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <h1>Preston Idaho</h1>
-
-    <section class='weatherSummary'>
-      <img srcset="images/heroImg400pxSmall.jpg 400w,
-                   images/heroImg600pxMed.jpg 600w,
-                   images/heroImg800pxMed.jpg 800w,
-                   images/heroImg1200pxLarge.jpg 1200w"
-           sizes="100vw"
-           src="images/heroImg1200pxLarge.jpg"
-           alt="placeholder">
-      <div>
-        <h2>Weather Summary</h2>
-        <p>Currently: <span id='shortForecast'></span></p>
-        <p>Temperature: <span id="temperature"></span>&deg;F</p>
-        <p>Wind Chill: <span id="windChill"></span></p>
-        <p>Humidity: <span id="humidity"></span>%</p>
-        <p>Wind Speed: <span id="windSpeed"></span> mph</p>
-
-      </div>
-    </section>
-
-    <section class='fiveDayForecast'>
-      <h1>Five Day Forcast</h1>
-      <ul>
-        <li><img class='fiveDayImg' src="images/100x90.png" alt="placeholder"></li>
-        <li><img class='fiveDayImg' src="images/100x90.png" alt="placeholder"></li>
-        <li><img class='fiveDayImg' src="images/100x90.png" alt="placeholder"></li>
-        <li><img class='fiveDayImg' src="images/100x90.png" alt="placeholder"></li>
-        <li><img class='fiveDayImg' src="images/100x90.png" alt="placeholder"></li>
-      </ul>
-      <div>
-        <img src="images/200x200.png" alt="placeholder">
-        <h2>Icy Roads </h2>        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna 
-          aliqua. Tristique sollicitudin nibh sit amet commodo nulla 
-          facilisi. Vitae ultricies leo integer malesuada nunc vel. 
-          Proin gravida hendrerit lectus a. Sed id semper risus in 
-          hendrerit. Feugiat vivamus at augue eget arcu dictum. Gravida 
-          cum sociis natoque penatibus et magnis dis. Proin sagittis 
-          nisl rhoncus mattis rhoncus urna. Viverra ipsum nunc aliquet 
-          bibendum enim facilisis gravida neque. In pellentesque massa 
-          placerat duis ultricies lacus sed turpis. </p>
-        <img src="images/800x300.png" alt="placeholder">
-      </div>
+  <main >
+    <h1>Weather Gallery</h1>
+    <section id="galleryGrid">
+      <figure>
+        <img loading='lazy' src="images/weather-1.jpg" alt="Snowy hillside">
+        <figcaption>Snowy hillside</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-2.jpg" alt="Meandering gravel road">
+        <figcaption>Meandering gravel road</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-3.jpg" alt="Cottage in the snow">
+        <figcaption>Cottage in the snow</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-4.jpg" alt="Rain and lightning in the distance">
+        <figcaption>Rain and lightning in the distance</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-5.jpg" alt="Snow covered forest">
+        <figcaption>Snow covered forest</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-6.jpg" alt="Lightning in the night">
+        <figcaption>Lightning in the night</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-7.jpg" alt="Sunbreak over distant mountains">
+        <figcaption>Sunbreak over distant mountains</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-8.jpg" alt="Clear skys clash with clouds">
+        <figcaption>Clear skys clash with clouds</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-9.jpg" alt="Wide open field on a nice day">
+        <figcaption>Wide open field on a nice day</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-10.jpg" alt="Snow touched highlands">
+        <figcaption>Snow touched highlands</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-11.jpg" alt="Green rolling hills">
+        <figcaption>Green rolling hills</figcaption>
+      </figure>
+      <figure>
+        <img loading='lazy' src="images/weather-12.jpg" alt="Deer on a foggy morning">
+        <figcaption>Deer on a foggy morning</figcaption>
+      </figure>
     </section>
   </main>
   <footer>
@@ -116,15 +120,5 @@
       <p id="lastModified"></p>
     </section>
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js">
-    WebFont.load({
-      google: {
-        families: [
-          'Bitter',
-          'Raleway'
-        ]
-      }
-    });
-  </script>
 </body>
 </html>
