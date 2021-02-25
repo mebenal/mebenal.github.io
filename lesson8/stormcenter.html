@@ -43,24 +43,24 @@
     <h2 id='formH2'>Storm Report Form</h2>
     <form action="thanks.html">
       <fieldset class='contactInfo'>Contact Info<br>
-        <label for="">Full Name:<br>
+        <label for="name">Full Name:<br>
           <input type="text" name="name" placeholder='John Doe' required='required' pattern="[A-Za-z ]{5,}">
         </label>
-        <label for="">Email:<br>
+        <label for="email">Email:<br>
           <input type="email" name="email" placeholder="johndoe@example.com">
         </label>
-        <label for="">Phone Number:<br>
+        <label for="phoneNumber">Phone Number:<br>
           <input type="tel" name="phoneNumber" placeholder='123 456 7890' required="required">
         </label>
-        <label for="">Zip Code:<br>
+        <label for="zipCode">Zip Code:<br>
           <input type="number" name="zipCode" placeholder='97420' min="10000" max='99999' required='required'>
         </label>
       </fieldset>
       <fieldset class='stormInfo'>Storm Info
-        <label for="">Storm Date:<br>
+        <label for="stormDate">Storm Date:<br>
           <input type="date" name="stormDate">
         </label>
-        <label for="">Storm Type:<br>
+        <label for="stormType">Storm Type:<br>
           <input name="stormType" list='stormList'>
         </label>
         <datalist id="stormList">
@@ -70,11 +70,11 @@
           <option value="Thunderstorm">Thunderstorm</option>
           <option value="Tornado">Tornado</option>
         </datalist>
-        <label for="">Storm Severity:<br>
+        <label for="stormSeverity">Storm Severity:<br>
           <input type="range" name="stormSeverity" value='5' min='1' max='10' id='range'>
           <span id=rangeNum>5</span>
         </label>
-        <label for="">Storm Region:<br>
+        <label for="stormRegion">Storm Region:<br>
           <select name="stormRegion">
             <option value="" disabled selected>Select a region...</option>
             <option value="Preston">Preston</option>
@@ -85,17 +85,17 @@
         <fieldset>
           <legend>User In Danger:</legend>
           <input type="radio" name="userInDanger">
-          <label for="">Yes</label><br>
+          <label for="userInDanger">Yes</label><br>
           <input type="radio" name="userInDanger">
-          <label for="">Maybe</label><br>
+          <label for="userInDanger">Maybe</label><br>
           <input type="radio" name="userInDanger">
-          <label for="">No</label><br>
+          <label for="userInDanger">No</label><br>
         </fieldset>
-        <label for="">Additional Information:<br> 
-          <textarea name="AdditionalInformation" rows='3'></textarea>
+        <label for="additionalInformation">Additional Information:<br> 
+          <textarea name="additionalInformation" rows='3'></textarea>
         </label>
       </fieldset>
-      <input type="submit" name="">
+      <input type="submit" name="submit">
     </form>
 
     
