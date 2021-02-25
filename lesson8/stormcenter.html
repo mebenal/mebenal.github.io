@@ -44,24 +44,24 @@
     <form action="thanks.html">
       <fieldset class='contactInfo'>Contact Info<br>
         <label for="name">Full Name:<br>
-          <input type="text" name="name" placeholder='John Doe' required='required' pattern="[A-Za-z ]{5,}">
+          <input id='name' type="text" name="name" placeholder='John Doe' required='required' pattern="[A-Za-z ]{5,}">
         </label>
         <label for="email">Email:<br>
-          <input type="email" name="email" placeholder="johndoe@example.com">
+          <input id='email' type="email" name="email" placeholder="johndoe@example.com">
         </label>
         <label for="phoneNumber">Phone Number:<br>
-          <input type="tel" name="phoneNumber" placeholder='123 456 7890' required="required">
+          <input id='phoneNumber' type="tel" name="phoneNumber" placeholder='123 456 7890' required="required">
         </label>
         <label for="zipCode">Zip Code:<br>
-          <input type="number" name="zipCode" placeholder='97420' min="10000" max='99999' required='required'>
+          <input id='zipCode' type="number" name="zipCode" placeholder='97420' min="10000" max='99999' required='required'>
         </label>
       </fieldset>
       <fieldset class='stormInfo'>Storm Info
         <label for="stormDate">Storm Date:<br>
-          <input type="date" name="stormDate">
+          <input id='stormDate' type="date" name="stormDate">
         </label>
         <label for="stormType">Storm Type:<br>
-          <input name="stormType" list='stormList'>
+          <input id='stormType' name="stormType" list='stormList'>
         </label>
         <datalist id="stormList">
           <option value="Flash Flood">Flash Flood</option>
@@ -71,11 +71,11 @@
           <option value="Tornado">Tornado</option>
         </datalist>
         <label for="stormSeverity">Storm Severity:<br>
-          <input type="range" name="stormSeverity" value='5' min='1' max='10' id='range'>
+          <input id='stormSeverity' type="range" name="stormSeverity" value='5' min='1' max='10' id='range'>
           <span id=rangeNum>5</span>
         </label>
         <label for="stormRegion">Storm Region:<br>
-          <select name="stormRegion">
+          <select id='stormRegion' name="stormRegion">
             <option value="" disabled selected>Select a region...</option>
             <option value="Preston">Preston</option>
             <option value="Soda Springs">Soda Springs</option>
@@ -84,21 +84,20 @@
         </label>
         <fieldset>
           <legend>User In Danger:</legend>
-          <input type="radio" name="userInDanger">
-          <label for="userInDanger">Yes</label><br>
-          <input type="radio" name="userInDanger">
-          <label for="userInDanger">Maybe</label><br>
-          <input type="radio" name="userInDanger">
-          <label for="userInDanger">No</label><br>
+          <input id='inYes' type="radio" name="userInDanger">
+          <label for="inYes">Yes</label><br>
+          <input id='inMaybe' type="radio" name="userInDanger">
+          <label for="inMaybe">Maybe</label><br>
+          <input id='inNo' type="radio" name="userInDanger">
+          <label for="inNo">No</label><br>
         </fieldset>
         <label for="additionalInformation">Additional Information:<br> 
-          <textarea name="additionalInformation" rows='3'></textarea>
+          <textarea id='additionalInformation' name="additionalInformation" rows='3'></textarea>
         </label>
       </fieldset>
       <input type="submit" name="submit">
     </form>
 
-    
   </main>
   <footer>
 
