@@ -477,6 +477,10 @@ iframe {
     width: 100%
   }
 
+  #range {
+    width: calc(100% - 1rem);
+  }
+
   form > input {
     width: 50%;
     height: 2rem;
