@@ -243,6 +243,12 @@ label {
   margin: .5rem 0;
 }
 
+form fieldset fieldset input {
+  height: 1rem;
+  width: 1rem;
+  margin: .5rem;
+}
+
 .contactInfo input:invalid {
 	background-color: #fdd;
 	color: #000;
