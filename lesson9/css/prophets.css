@@ -1,0 +1,32 @@
+.cards {
+  display: grid;
+  grid-gap: .3em;
+  margin: 1em;
+}
+
+section {
+  width: 100%;
+  background-color: lightgray;
+}
+
+p, h2 {
+  text-align: center;
+}
+
+section > div {
+  width: 75%;
+  margin: 0 auto .5rem;
+}
+
+img {
+ width: 100%;
+}
+
+@media only screen and (min-width:34.5em) {
+}
+
+@media only screen and (min-width:75em) {
+  .cards {
+    grid-template-columns: repeat(4, auto);
+  }
+}
