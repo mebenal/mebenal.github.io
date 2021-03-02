@@ -31,7 +31,7 @@ p {
 }
 
 section > div {
-  width: 75%;
+  width: 33%;
   margin: 0 auto .5rem;
 }
 
@@ -43,6 +43,9 @@ img {
 }
 
 @media only screen and (min-width:34.5em) {
+  section > div {
+    width: 75%;
+  }
   .cards {
     grid-template-columns: auto auto;
     margin: 1em;
