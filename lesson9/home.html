@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="css/small.css">
   <script src="js/page.js"></script>
-  <script src='js/weather.js'></script>
+  <script src='js/home.js'></script>
 </head>
 <body>
   <ul id="banner">
@@ -31,8 +31,8 @@
 
     <nav>
       <ul id="navigation">
-        <li><a href="home.html">Home</a></li>
-        <li><a class='active' href="preston-9.html">Preston</a></li>
+        <li><a class='active' href="#">Home</a></li>
+        <li><a href="preston-9.html">Preston</a></li>
         <li><a href="#">Soda Springs</a></li>
         <li><a href="#">Fish Haven</a></li>
         <li><a href="stormcenter.html">Storm Center</a></li>
@@ -40,56 +40,49 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <h1>Preston Idaho</h1>
 
-    <section class='weatherSummary'>
-      <img srcset="../lesson7/images/heroImg400pxSmall.jpg 400w,
-      ../lesson7/images/heroImg600pxMed.jpg 600w,
-      ../lesson7/images/heroImg800pxMed.jpg 800w,
-      ../lesson7/images/heroImg1200pxLarge.jpg 1200w"
-           sizes="100vw"
-           src="../lesson7/images/heroImg1200pxLarge.jpg"
-           alt="placeholder">
+  <main class='home'>
+    <section class='homePreston'>
       <div>
-        <h2>Weather Summary</h2>
-        <p>Currently: <span id='shortForecast'></span></p>
-        <p>Temperature: <span id="temperature"></span>&deg;F</p>
-        <p>Wind Chill: <span id="windChill"></span></p>
-        <p>Humidity: <span id="humidity"></span>%</p>
-        <p>Wind Speed: <span id="windSpeed"></span> mph</p>
-
+        <div class='size'>
+          <h2></h2>
+          <h3></h3>
+        </div>
+        <p class="homeFounded"></p>
+        <p class="homePopulation"></p>
+        <p class="homeRainfall"></p>
       </div>
+      <div class='homeImg'><img src="" alt=""></div>
     </section>
-
-    <section class='fiveDayForecast'>
-      <h1>Five Day Forcast</h1>
-      <ul>
-        <li><img class='fiveDayImg' src="../lesson7/images/100x90.png" alt="placeholder"></li>
-        <li><img class='fiveDayImg' src="../lesson7/images/100x90.png" alt="placeholder"></li>
-        <li><img class='fiveDayImg' src="../lesson7/images/100x90.png" alt="placeholder"></li>
-        <li><img class='fiveDayImg' src="../lesson7/images/100x90.png" alt="placeholder"></li>
-        <li><img class='fiveDayImg' src="../lesson7/images/100x90.png" alt="placeholder"></li>
-      </ul>
+    
+    <section class='homeFishHaven'>
       <div>
-        <img src="../lesson7/images/200x200.png" alt="placeholder">
-        <h2>Icy Roads </h2>        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna 
-          aliqua. Tristique sollicitudin nibh sit amet commodo nulla 
-          facilisi. Vitae ultricies leo integer malesuada nunc vel. 
-          Proin gravida hendrerit lectus a. Sed id semper risus in 
-          hendrerit. Feugiat vivamus at augue eget arcu dictum. Gravida 
-          cum sociis natoque penatibus et magnis dis. Proin sagittis 
-          nisl rhoncus mattis rhoncus urna. Viverra ipsum nunc aliquet 
-          bibendum enim facilisis gravida neque. In pellentesque massa 
-          placerat duis ultricies lacus sed turpis. </p>
-        <img src="../lesson7/images/800x300.png" alt="placeholder">
+        <div class='size'>
+          <h2></h2>
+          <h3></h3>
+        </div>
+        <p class="homeFounded"></p>
+        <p class="homePopulation"></p>
+        <p class="homeRainfall"></p>
       </div>
+      <div class='homeImg'><img src="" alt=""></div>
+    </section>
+    
+    <section class='homeSodaSprings'>
+      <div>
+        <div class='size'>
+          <h2></h2>
+          <h3></h3>
+        </div>
+        <p class="homeFounded"></p>
+        <p class="homePopulation"></p>
+        <p class="homeRainfall"></p>
+      </div>
+      <div class='homeImg'><img src="" alt=""></div>
     </section>
   </main>
-  <footer>
 
+  <footer>
     <section class="grid">
       <section class="contact">
         <h2>Contact Information</h2>

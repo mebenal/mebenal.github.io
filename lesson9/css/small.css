@@ -141,7 +141,33 @@ main h1 {
   margin: 1rem .5rem;
 }
 
-/*Preston page styles */
+/* Home page styles */
+main.home {
+  display: grid;
+  grid-gap: 1rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.home > section {
+  background-color: var(--accent-color-one);
+  display: grid;
+}
+.home h2 {
+  margin-bottom: .2rem;
+}
+
+.home h3 {
+  margin-top: .2rem;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.home > section > div > img{
+  display: block;
+}
+
+/* Preston page styles */
 .weatherSummary{
   background-color: var(--primary-color);
 }
@@ -396,6 +422,29 @@ iframe {
     text-align: center;
   }
 
+  .home h2 {
+    font-size: 30px;
+  }
+
+  .home h3 {
+    font-size: 20px;
+  }
+  
+  .home > section {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+
+  .home > section:nth-child(even) > div:first-child {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .home .homeImg {
+    margin:auto;
+  }
+
   .weatherSummary {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
@@ -582,6 +631,25 @@ iframe {
 
   body {
     background-color: white;
+  }
+
+  main.home {
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+  
+  .home > section div.size {
+    height: 5rem;
+  }
+
+  .home > section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 0;
+  }
+
+  .home > section:nth-child(even) > div:first-child {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
   }
 
   .fiveDayForecast div img:first-child {
