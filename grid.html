@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <style>
+    body {
+      display: block;
+      overflow: auto;
+      background-color: #72A3FD;
+    }
+
+    main {
+      overflow: auto;
+    }
+
+    p {
+      margin: .25rem;;
+    }
+
+    input.small {
+      width: 2rem;
+    }
+
+    input {
+      width: 5rem;
+    }
+
+    .header {
+      background-color: cornflowerblue;
+      text-align: center;
+      width: fit-content;
+      padding: 1rem;
+      margin: 1rem auto;
+      height: 18rem;
+      width: 50%;
+    }
+
+    .headGrid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+    }
+
+    #grid {
+      display: grid;
+      background-color: #aaaaaa99;
+      width: 100%;
+      height: calc(100vh - 22rem);
+    }
+
+    .gridElement {
+      background-color: #55555533;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <section class='header'>
+      <h1>Grid Demonstration</h1>
+      <section class='headGrid'>
+        <p># of Columns: <input class='small' id='numCol' type="number"></p>
+        <p># of Rows: <input class='small' id='numRow' type="number"></p>
+        <p>Grid Gap (in px): <input class='small' id='gridGap' type="number"></p>
+        <p>Columns Widths(in fr): <input id='colWidths' type="text" placeholder="3, 5, 2"></p>
+        <p>Row Heights(in fr): <input id='rowHeights' type="text" placeholder="2, 3, 5"></p>
+      </section>
+      <button id='createGrid'>Create Grid</button>
+    </section>
+    <section>
+      <section id='grid'>
+      </section>
+    </section>
+  </main>
+</body>
+<script>
+  document.getElementById('createGrid').addEventListener('click', () => {
+    function buildString(array, num, str) {
+      if (array.length >= num) {
+        for (let i = 0; i < num; i++) {
+          if (!(!isNaN(parseFloat(array[i])) && isFinite(array[i])) || array[i].trim() === '0') {
+            array[i] = 1;
+          } else {
+            array[i] = Number(array[i]);
+          }
+          str += `${array[i]}fr `;
+        }
+      } else {
+        array.push(array[array.length - 1]);
+        str = buildString(array, num, str);
+      }
+      return str;
+    }
+
+    function makePosative(number) {
+      if (number < 0) {
+        number *= -1;
+      } else if (isNaN(number)) {
+        number = 0;
+      }
+      return number;
+    }
+
+    const gridChild = document.querySelector('#grid').childNodes;
+    for (let i = gridChild.length; i > 1; i--) {
+      gridChild[i - 1].remove();
+    }
+
+    const rowNum = makePosative(parseInt(document.getElementById('numRow').value, 10));
+    const colNum = makePosative(parseInt(document.getElementById('numCol').value, 10));
+    const gridGap = makePosative(parseInt(document.getElementById('gridGap').value, 10));
+    const rowHeights = (document.getElementById('rowHeights').value).split(',');
+    const colWidths = (document.getElementById('colWidths').value).split(',');
+  
+    let rowStr = '';
+    let colStr = '';
+    rowStr = buildString(rowHeights, rowNum, rowStr);
+    colStr = buildString(colWidths, colNum, colStr);
+    const gridStr = `${gridGap}px`;
+    console.log(rowHeights);
+  
+    const gridEle = document.getElementById('grid');
+    gridEle.style.gridTemplateRows = rowStr;
+    gridEle.style.gridTemplateColumns = colStr;
+    gridEle.style.gridGap = gridStr;
+  
+    for (let i = 0; i < rowNum; i++) {
+      for (let j = 0; j < colNum; j++) {
+        const item = document.createElement('div');
+        const p = document.createElement('p');
+  
+        p.classList.add('gridP');
+        p.innerHTML = `Element ${i * colNum + j + 1}`;
+        item.appendChild(p);
+  
+        item.classList.add('gridElement');
+        document.querySelector('#grid').appendChild(item);
+      }
+    }
+  });
+</script>
+</html>
