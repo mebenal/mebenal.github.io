@@ -6,6 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <script>
+    document.getElementById('createGrid').addEventListener('click', () => {
+      function buildString(array, num, str) {
+        if (array.length >= num) {
+          for (let i = 0; i < num; i++) {
+            if (!(!isNaN(parseFloat(array[i])) && isFinite(array[i])) || array[i].trim() === '0') {
+              array[i] = 1;
+            } else {
+              array[i] = Number(array[i]);
+            }
+            str += `${array[i]}fr `;
+          }
+        } else {
+          array.push(array[array.length - 1]);
+          str = buildString(array, num, str);
+        }
+        return str;
+      }
+
+      function makePosative(number) {
+        if (number < 0) {
+          number *= -1;
+        } else if (isNaN(number)) {
+          number = 0;
+        }
+        return number;
+      }
+
+      const gridChild = document.querySelector('#grid').childNodes;
+      for (let i = gridChild.length; i > 1; i--) {
+        gridChild[i - 1].remove();
+      }
+
+      const rowNum = makePosative(parseInt(document.getElementById('numRow').value, 10));
+      const colNum = makePosative(parseInt(document.getElementById('numCol').value, 10));
+      const gridGap = makePosative(parseInt(document.getElementById('gridGap').value, 10));
+      const rowHeights = (document.getElementById('rowHeights').value).split(',');
+      const colWidths = (document.getElementById('colWidths').value).split(',');
+    
+      let rowStr = '';
+      let colStr = '';
+      rowStr = buildString(rowHeights, rowNum, rowStr);
+      colStr = buildString(colWidths, colNum, colStr);
+      const gridStr = `${gridGap}px`;
+      console.log(rowHeights);
+    
+      const gridEle = document.getElementById('grid');
+      gridEle.style.gridTemplateRows = rowStr;
+      gridEle.style.gridTemplateColumns = colStr;
+      gridEle.style.gridGap = gridStr;
+    
+      for (let i = 0; i < rowNum; i++) {
+        for (let j = 0; j < colNum; j++) {
+          const item = document.createElement('div');
+          const p = document.createElement('p');
+    
+          p.classList.add('gridP');
+          p.innerHTML = `Element ${i * colNum + j + 1}`;
+          item.appendChild(p);
+    
+          item.classList.add('gridElement');
+          document.querySelector('#grid').appendChild(item);
+        }
+      }
+    });
+  </script>
   <style>
     body {
       display: block;
@@ -81,70 +147,4 @@
     </section>
   </main>
 </body>
-<script>
-  document.getElementById('createGrid').addEventListener('click', () => {
-    function buildString(array, num, str) {
-      if (array.length >= num) {
-        for (let i = 0; i < num; i++) {
-          if (!(!isNaN(parseFloat(array[i])) && isFinite(array[i])) || array[i].trim() === '0') {
-            array[i] = 1;
-          } else {
-            array[i] = Number(array[i]);
-          }
-          str += `${array[i]}fr `;
-        }
-      } else {
-        array.push(array[array.length - 1]);
-        str = buildString(array, num, str);
-      }
-      return str;
-    }
-
-    function makePosative(number) {
-      if (number < 0) {
-        number *= -1;
-      } else if (isNaN(number)) {
-        number = 0;
-      }
-      return number;
-    }
-
-    const gridChild = document.querySelector('#grid').childNodes;
-    for (let i = gridChild.length; i > 1; i--) {
-      gridChild[i - 1].remove();
-    }
-
-    const rowNum = makePosative(parseInt(document.getElementById('numRow').value, 10));
-    const colNum = makePosative(parseInt(document.getElementById('numCol').value, 10));
-    const gridGap = makePosative(parseInt(document.getElementById('gridGap').value, 10));
-    const rowHeights = (document.getElementById('rowHeights').value).split(',');
-    const colWidths = (document.getElementById('colWidths').value).split(',');
-  
-    let rowStr = '';
-    let colStr = '';
-    rowStr = buildString(rowHeights, rowNum, rowStr);
-    colStr = buildString(colWidths, colNum, colStr);
-    const gridStr = `${gridGap}px`;
-    console.log(rowHeights);
-  
-    const gridEle = document.getElementById('grid');
-    gridEle.style.gridTemplateRows = rowStr;
-    gridEle.style.gridTemplateColumns = colStr;
-    gridEle.style.gridGap = gridStr;
-  
-    for (let i = 0; i < rowNum; i++) {
-      for (let j = 0; j < colNum; j++) {
-        const item = document.createElement('div');
-        const p = document.createElement('p');
-  
-        p.classList.add('gridP');
-        p.innerHTML = `Element ${i * colNum + j + 1}`;
-        item.appendChild(p);
-  
-        item.classList.add('gridElement');
-        document.querySelector('#grid').appendChild(item);
-      }
-    }
-  });
-</script>
 </html>
