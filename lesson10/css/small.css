@@ -65,7 +65,7 @@ header {
 #banner {
   width: 100%;
   display: none;
-  grid-template-columns: 95% 5%;;
+  grid-template-columns: 95% 5%;
   text-align: center;
   background-color: var(--accent-color-one);
   margin: 0;
@@ -75,6 +75,7 @@ header {
 #banner li {
   list-style: none;
 }
+
 #banner li p, #banner li a {
   text-decoration: none;
   font-size: 3vw;
