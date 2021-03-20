@@ -16,8 +16,6 @@ window.addEventListener('load', async () => {
   const weatherForecast = (await getWeatherOpen(urls[0], places[0]))
     .list.filter(time => (time.dt + 21600) % 86400 === 0);
 
-  console.log(weatherForecast);
-
   document.getElementById('shortForecast').innerHTML = weather.weather[0].main;
   document.getElementById('temperature').innerHTML = weather.main.temp;
   document.getElementById('humidity').innerHTML = weather.main.humidity;
@@ -33,7 +31,6 @@ window.addEventListener('load', async () => {
   }
 
   const test = document.getElementsByClassName('fiveDayLi');
-  console.log(test);
   for (let i = 0; i < test.length; i++) {
     test[i].childNodes[0].innerHTML = new Date(weatherForecast[i].dt * 1000)
       .toString().substr(0, 3);
