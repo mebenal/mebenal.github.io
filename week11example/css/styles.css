@@ -1,0 +1,18 @@
+#temples {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.templeCard {
+    background-color: lightblue;
+    padding: 1rem;
+    margin: .5rem;
+}
+
+img {
+    width: 100%;
+}
+
+.templeImg {
+    width: 100%;
+}
