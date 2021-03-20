@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather One Preston</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&family=Raleway:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <script src="js/page.js"></script>
+</head>
+<body>
+  <ul id="banner">
+    <li><p>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</p></li>
+    <li><a href="#" class="shut">&Cross;</a></li>
+  </ul>
+
+  <div id="gray"></div>
+  
+  <header>
+    <section class="siteIntro">
+      <img class="siteLogo" src="images/logo.svg" alt="Weather 1 Preston Logo">
+      <section class="titleAndMotto">
+        <h1 class="siteTitle">Weather 1 Preston</h1>
+        <h3 class="siteMotto">The one stop shop for Preston weather</h3>
+      </section>
+      <a href="#" class="ham">&#9776;</a>
+    </section>
+
+    <nav>
+      <ul id="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="preston.html">Preston</a></li>
+        <li><a href="#">Soda Springs</a></li>
+        <li><a href="#">Fish Haven</a></li>
+        <li><a class='active' href="stormcenter.html">Storm Center</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2 id='formH2'>Storm Report Form</h2>
+    <form action="thanks.html">
+      <fieldset class='contactInfo'>Contact Info<br>
+        <label for="name">Full Name:<br>
+          <input id='name' type="text" name="name" placeholder='John Doe' required='required' pattern="[A-Za-z ]{5,}">
+        </label>
+        <label for="email">Email:<br>
+          <input id='email' type="email" name="email" placeholder="johndoe@example.com">
+        </label>
+        <label for="phoneNumber">Phone Number:<br>
+          <input id='phoneNumber' type="tel" name="phoneNumber" placeholder='123 456 7890' required="required">
+        </label>
+        <label for="zipCode">Zip Code:<br>
+          <input id='zipCode' type="number" name="zipCode" placeholder='97420' min="10000" max='99999' required='required'>
+        </label>
+      </fieldset>
+      <fieldset class='stormInfo'>Storm Info
+        <label for="stormDate">Storm Date:<br>
+          <input id='stormDate' type="date" name="stormDate">
+        </label>
+        <label for="stormType">Storm Type:<br>
+          <input id='stormType' name="stormType" list='stormList'>
+        </label>
+        <datalist id="stormList">
+          <option value="Flash Flood">Flash Flood</option>
+          <option value="Hail">Hail</option>
+          <option value="Hurricane">Hurricane</option>
+          <option value="Thunderstorm">Thunderstorm</option>
+          <option value="Tornado">Tornado</option>
+        </datalist>
+        <label for="range">Storm Severity:<br>
+          <input type="range" name="stormSeverity" value='5' min='1' max='10' id='range'>
+          <span id=rangeNum>5</span>
+        </label>
+        <label for="stormRegion">Storm Region:<br>
+          <select id='stormRegion' name="stormRegion">
+            <option value="" disabled selected>Select a region...</option>
+            <option value="Preston">Preston</option>
+            <option value="Soda Springs">Soda Springs</option>
+            <option value="Fish Haven">Fish Haven</option>
+          </select>
+        </label>
+        <fieldset>
+          <legend>User In Danger:</legend>
+          <input id='inYes' type="radio" name="userInDanger">
+          <label for="inYes">Yes</label><br>
+          <input id='inMaybe' type="radio" name="userInDanger">
+          <label for="inMaybe">Maybe</label><br>
+          <input id='inNo' type="radio" name="userInDanger">
+          <label for="inNo">No</label><br>
+        </fieldset>
+        <label for="additionalInformation">Additional Information:<br> 
+          <textarea id='additionalInformation' name="additionalInformation" rows='3'></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" name="submit">
+    </form>
+
+  </main>
+  <footer>
+
+    <section class="grid">
+      <section class="contact">
+        <h2>Contact Information</h2>
+        <ul class="contactIcons">
+          <li><p>&#128204;<span class="space"></span>525 South Center St. Rexburg, ID, 83460</p></li>
+          <li><p>&#9993;<span class="space"></span>ebe17003@byui.edu</p></li>
+          <li><p>&phone;<span class="space"></span>(123)-456-7890</p></li>
+        </ul>
+
+        <section class="socialMediaIcons">
+          <img src="images/facebook.svg" alt="Facebook Icon">
+          <img src="images/twitter.svg" alt="Twitter Icon">
+          <img src="images/instagram.svg" alt="Instagram Icon">
+        </section>
+      </section>
+
+      <section id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.726282765885!2d-111.91534437659205!3d42.09980531172995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e0!3m2!1sen!2sus!4v1611966640613!5m2!1sen!2sus" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </section>
+    </section>
+    
+    <section class="footerBar">
+      <p><span id="fullYear"></span> | Michael B Ebenal | Idaho | <a href="https://www.byui.edu/online">Brigham Young University - Idaho</a>
+      <p id="lastModified"></p>
+    </section>
+  </footer>
+</body>
+</html>
