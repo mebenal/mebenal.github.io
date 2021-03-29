@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather One Preston</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&family=Raleway:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <script src="js/page.js"></script>
+  <script src='js/weather.js'></script>
+</head>
+<body>
+  <ul id="banner">
+    <li><p>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</p></li>
+    <li><a href="#" class="shut">&Cross;</a></li>
+  </ul>
+
+  <div id="gray"></div>
+  
+  <header>
+    <section class="siteIntro">
+      <img class="siteLogo" src="images/logo.svg" alt="Weather 1 Preston Logo">
+      <section class="titleAndMotto">
+        <h1 class="siteTitle">Weather 1 Preston</h1>
+        <h3 class="siteMotto">The one stop shop for Preston weather</h3>
+      </section>
+      <a href="#" class="ham">&#9776;</a>
+    </section>
+
+    <nav>
+      <ul id="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a class='active' href="#">Preston</a></li>
+        <li><a href="soda-springs.html">Soda Springs</a></li>
+        <li><a href="fish-haven.html">Fish Haven</a></li>
+        <li><a href="stormcenter.html">Storm Center</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Preston Idaho</h1>
+
+    <section class='weatherSummary'>
+      <img srcset="images/heroImg400pxSmall.jpg 400w,
+      images/heroImg600pxMed.jpg 600w,
+      images/heroImg800pxMed.jpg 800w,
+      images/heroImg1200pxLarge.jpg 1200w"
+           sizes="100vw"
+           src="images/heroImg1200pxLarge.jpg"
+           alt="placeholder">
+      <div>
+        <h2>Weather Summary</h2>
+        <p>Currently: <span id='shortForecast'></span></p>
+        <p>Temperature: <span id="temperature"></span>&deg;F</p>
+        <p>Wind Chill: <span id="windChill"></span></p>
+        <p>Humidity: <span id="humidity"></span>%</p>
+        <p>Wind Speed: <span id="windSpeed"></span> mph</p>
+
+      </div>
+    </section>
+
+    <section class='fiveDayForecast'>
+      <h1>Five Day Forcast</h1>
+      <ul>
+        <li class='fiveDayLi'><h3></h3><img src="images/100x90.png" alt="placeholder"><p></p></li>
+        <li class='fiveDayLi'><h3></h3><img src="images/100x90.png" alt="placeholder"><p></p></li>
+        <li class='fiveDayLi'><h3></h3><img src="images/100x90.png" alt="placeholder"><p></p></li>
+        <li class='fiveDayLi'><h3></h3><img src="images/100x90.png" alt="placeholder"><p></p></li>
+        <li class='fiveDayLi'><h3></h3><img src="images/100x90.png" alt="placeholder"><p></p></li>
+      </ul>
+      <div>
+        <img src="images/200x200.png" alt="placeholder">
+        <h2>Icy Roads </h2>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna 
+          aliqua. Tristique sollicitudin nibh sit amet commodo nulla 
+          facilisi. Vitae ultricies leo integer malesuada nunc vel. 
+          Proin gravida hendrerit lectus a. Sed id semper risus in 
+          hendrerit. Feugiat vivamus at augue eget arcu dictum. Gravida 
+          cum sociis natoque penatibus et magnis dis. Proin sagittis 
+          nisl rhoncus mattis rhoncus urna. Viverra ipsum nunc aliquet 
+          bibendum enim facilisis gravida neque. In pellentesque massa 
+          placerat duis ultricies lacus sed turpis. </p>
+        <img src="images/800x300.png" alt="placeholder">
+      </div>
+    </section>
+  </main>
+  <footer>
+
+    <section class="grid">
+      <section class="contact">
+        <h2>Contact Information</h2>
+        <ul class="contactIcons">
+          <li><p>&#128204;<span class="space"></span>525 South Center St. Rexburg, ID, 83460</p></li>
+          <li><p>&#9993;<span class="space"></span>ebe17003@byui.edu</p></li>
+          <li><p>&phone;<span class="space"></span>(123)-456-7890</p></li>
+        </ul>
+
+        <section class="socialMediaIcons">
+          <img src="images/facebook.svg" alt="Facebook Icon">
+          <img src="images/twitter.svg" alt="Twitter Icon">
+          <img src="images/instagram.svg" alt="Instagram Icon">
+        </section>
+      </section>
+
+      <section id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.726282765885!2d-111.91534437659205!3d42.09980531172995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e0!3m2!1sen!2sus!4v1611966640613!5m2!1sen!2sus" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </section>
+    </section>
+    
+    <section class="footerBar">
+      <p><span id="fullYear"></span> | Michael B Ebenal | Idaho | <a href="https://www.byui.edu/online">Brigham Young University - Idaho</a>
+      <p id="lastModified"></p>
+    </section>
+  </footer>
+</body>
+</html>
