@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/checkout.css">  
+  <script src="js/checkout.js"></script>
+  <title>Checkout</title>
+</head>
+<body>
+  <main>
+    <section class="summary">
+      <div class="tracker">
+        <ul>
+          <li><span class="material-icons">check_circle</span></li>
+          <li><hr></li>
+          <li><span class="material-icons">circle</span></li>
+          <li><hr></li>
+          <li><span class="material-icons">radio_button_unchecked</span></li>
+        </ul>
+        <img src="images/triangle.svg" alt="">
+        <ul>
+          <li>Shipping</li>
+          <li></li>
+          <li>Payment details</li>
+          <li></li>
+          <li>Checkout</li>
+        </ul>
+      </div>
+      <br>
+      <div class='orderText'>
+        <h1>Order Summary</h1>
+        <div>
+          <h2>ORDER SUBTOTAL</h2>
+          <h2><span>$</span>46.95</h2>
+        </div>
+        <div>
+          <h2>SHIPPING & HANDLING</h2>
+          <h2><span>$</span>6.00</h2>
+        </div>
+        <div>
+          <h2>SALES TAX</h2>
+          <h2><span>$</span>8.05</h2>
+        </div>
+        <hr>
+        <div>
+          <h2>PAYMENT DUE</h2>
+          <h2 id="h2Total"><span>$</span>61.00</h2>
+        </div>
+        <a href='#'>Return to cart</a>
+      </div>
+    </section>
+    <section class="details">
+      <div class="visaPaypal">
+        <button>
+          <img src="images/visa.png" alt="Visa Logo">
+        </button>
+        <button>
+          <img src="images/paypal.png" alt="Paypal Logo">
+        </button>
+      </div>
+      <h1>Payment Details</h1>
+      <form action="#">
+        <label for="">CARDHOLDER NAME<br>
+          <input type="text">
+        </label>
+        <label for="credit-number">CARD NUMBER<br>
+          <input name="credit-number" class="cc-number" type="tel" pattern="\d*" maxlength="19" placeholder="1234 5678 9012 3456">
+        </label>
+        <fieldset>EXPRIATION DATE<br>
+          <label for="">MONTH
+            <input type="text">
+          </label>
+          <label for="">YEAR
+            <input type="text">
+          </label>
+          <label for="">CVV<span class="material-icons-outlined">help</span><br>
+            <input type="text">
+          </label>
+          </fieldset>
+        <label for="">
+          <input type="text">
+        </label>
+        <label for="">
+          <input type="text">
+        Same as shipping address</label>
+      </form>
+      <div class='nextCancel'>
+        <button>NEXT</button>
+        <button>Cancel</button>
+      </div>
+      <p><span class="material-icons">lock</span>This is a secure transaction</p>
+    </section>
+  </main>
+</body>
+</html>
