@@ -19,19 +19,35 @@ window.addEventListener('load', async () => {
     return forecastResponse;
   }
 
+  async function getTowndata(townName) {
+    const data = (await (await fetch('js/towndata.json')).json()).towns;
+    let events = [];
+    for (const town of data) {
+      if (townName === town.name) {
+        events = town.events;
+      }
+    }
+    const parent = document.querySelector('.events div');
+    for (const event of events) {
+      const p = document.createElement('p');
+      p.innerHTML = event;
+      parent.appendChild(p);
+    }
+  }
+
   // Coords for Preston.
   const weather1 = await getWeather('42.0963133,-111.8766173');
 
   const page = document.getElementById('weatherPage').innerHTML;
   const fiveDay = document.querySelector('.fiveDayForecast div');
-  for (let detailedForecast of weather1) {
+  for (const detailedForecast of weather1) {
     const div = document.createElement('div');
     const h3 = document.createElement('h3');
     const p = document.createElement('p');
     const img = document.createElement('img');
 
     img.src = detailedForecast.icon;
-    img.alt = `${detailedForecast.name} icon`
+    img.alt = `${detailedForecast.name} icon`;
     h3.innerHTML = `${detailedForecast.name}: `;
     p.innerHTML = detailedForecast.detailedForecast;
 
@@ -40,6 +56,8 @@ window.addEventListener('load', async () => {
     div.appendChild(p);
     fiveDay.appendChild(div);
   }
+
+  getTowndata(page);
   // Possibly the most ghetto code I've ever written for this class.
   // If you see it, mourn the time I could have spent making it better.
   // But for now, I move to networking homework.
@@ -48,7 +66,6 @@ window.addEventListener('load', async () => {
   const urls = ['api.openweathermap.org/data/2.5/forecast', 'api.openweathermap.org/data/2.5/weather'];
 
   const weather = await getWeatherOpen(urls[1], page);
-  console.log(weather1);
   const weatherForecast = (await getWeatherOpen(urls[0], page))
     .list.filter(time => (time.dt + 21600) % 86400 === 0);
 

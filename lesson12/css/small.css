@@ -186,6 +186,11 @@ main.home {
   padding-bottom: .5rem;
 }
 
+.events {
+  background-color: var(--accent-color-one);
+  padding: 1rem;
+}
+
 .fiveDayForecast {
   background-color: var(--primary-color);
   height: 100%;
@@ -208,6 +213,16 @@ main.home {
 
 .fiveDayForecast p {
   margin: 0 3vw;
+}
+
+.fiveDayForecast > div > div > img {
+  width: 80px;
+  float: right;
+  margin-right: 1rem;
+}
+
+.fiveDayForecast > div > div {
+  margin-bottom: 3rem;
 }
 
 .fiveDayForecast > div > img:first-child {
@@ -467,6 +482,28 @@ iframe {
     margin: 4vw;
     padding: 1rem;
   }
+  
+  .events {
+    margin-top: 1rem;
+    background-color: #335EFD55;
+  }
+
+  .events h2 {
+    margin: 0;
+  }
+
+  .events > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .events > div > p {
+    margin: 0;
+    background-color: #99999933;
+    display: block;
+    padding: .75rem;
+  }
 
   .fiveDayForecast ul {
     display: flex;
@@ -514,9 +551,13 @@ iframe {
     padding: 1rem;
   }
 
-  .fiveDayForecast div img {
+  .fiveDayForecast div div img {
     float: right;
     width: 80px;
+  }
+
+  .fiveDayForecast div div {
+    margin-bottom: 1rem;
   }
 
   .fiveDayForecast h1 {
@@ -678,14 +719,18 @@ iframe {
     grid-column: 1 / 2;
   }
 
-  .fiveDayForecast div img:first-child {
+  .events > div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .fiveDayForecast > div > img:first-child {
     display: block;
     float: right;
     width: 200px;
     margin: 3%;
   }
   
-  .fiveDayForecast div img:last-child {
+  .fiveDayForecast > div > img:last-child {
     display: none;
   }
 
