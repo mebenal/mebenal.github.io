@@ -210,11 +210,11 @@ main.home {
   margin: 0 3vw;
 }
 
-.fiveDayForecast div img:first-child {
+.fiveDayForecast > div > img:first-child {
   display: none;
 }
 
-.fiveDayForecast div img:last-child {
+.fiveDayForecast > div > img:last-child {
   display: inline-block;
   width: 94%;
   margin: 3%;
@@ -488,9 +488,17 @@ iframe {
     grid-template-rows: auto auto auto;
   }
 
+  .fiveDayLi {
+    width: 100%;
+  }
+
   .fiveDayLi h3 {
     text-align: center;
     margin-bottom: 0;
+  }
+  
+  .fiveDayLi p {
+    text-align: center;
   }
 
   .fiveDayLi img {
@@ -503,6 +511,12 @@ iframe {
     position: relative;
     background-color: var(--primary-color);
     margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  .fiveDayForecast div img {
+    float: right;
+    width: 80px;
   }
 
   .fiveDayForecast h1 {

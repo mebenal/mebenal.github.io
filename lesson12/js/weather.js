@@ -6,53 +6,50 @@ window.addEventListener('load', async () => {
 
   async function getWeather(latLong) {
     const url = `https://api.weather.gov/points/${latLong}`;
-    const weather = {};
 
     let response = await fetch(url);
     response = await response.json();
 
-    const dataUrl = await response.properties.forecastGridData;
     const forecastUrl = response.properties.forecast;
 
     let forecastResponse = await fetch(forecastUrl);
-    let dataResponse = await fetch(dataUrl);
-
     forecastResponse = await forecastResponse.json();
-    dataResponse = await dataResponse.json();
-    console.log(forecastResponse);
+    forecastResponse = forecastResponse.properties.periods;
 
-    weather.fiveDayImgs = [];
-    weather.fiveDayImgsAlt = [];
-
-    for (let i = 0; i < 5; i++) {
-      weather.fiveDayImgs[i] = forecastResponse.properties.periods[i * 2].icon;
-      weather.fiveDayImgsAlt[i] = forecastResponse.properties.periods[i * 2].name;
-    }
-
-    [forecastResponse] = forecastResponse.properties.periods;
-    dataResponse = dataResponse.properties;
-
-    weather.forecast = forecastResponse.shortForecast;
-    weather.temperature = forecastResponse.temperature;
-    weather.humidity = dataResponse.relativeHumidity.values[0].value;
-    weather.windSpeed = dataResponse.windSpeed.values[0].value;
-
-    return weather;
+    return forecastResponse;
   }
 
   // Coords for Preston.
   const weather1 = await getWeather('42.0963133,-111.8766173');
+
+  const page = document.getElementById('weatherPage').innerHTML;
+  const fiveDay = document.querySelector('.fiveDayForecast div');
+  for (let detailedForecast of weather1) {
+    const div = document.createElement('div');
+    const h3 = document.createElement('h3');
+    const p = document.createElement('p');
+    const img = document.createElement('img');
+
+    img.src = detailedForecast.icon;
+    img.alt = `${detailedForecast.name} icon`
+    h3.innerHTML = `${detailedForecast.name}: `;
+    p.innerHTML = detailedForecast.detailedForecast;
+
+    div.appendChild(img);
+    div.appendChild(h3);
+    div.appendChild(p);
+    fiveDay.appendChild(div);
+  }
   // Possibly the most ghetto code I've ever written for this class.
   // If you see it, mourn the time I could have spent making it better.
   // But for now, I move to networking homework.
 
   // Coords for Preston.
-  const places = ['Preston', 'Fish Haven', 'Soda Springs'];
   const urls = ['api.openweathermap.org/data/2.5/forecast', 'api.openweathermap.org/data/2.5/weather'];
 
-  const weather = await getWeatherOpen(urls[1], places[0]);
-  console.log(weather);
-  const weatherForecast = (await getWeatherOpen(urls[0], places[0]))
+  const weather = await getWeatherOpen(urls[1], page);
+  console.log(weather1);
+  const weatherForecast = (await getWeatherOpen(urls[0], page))
     .list.filter(time => (time.dt + 21600) % 86400 === 0);
 
   document.getElementById('shortForecast').innerHTML = weather.weather[0].main;
