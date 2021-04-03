@@ -1,0 +1,48 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+main {
+  grid-template-columns: 1fr auto auto 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  background-image: url('../images/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.summary {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  width: 400px;
+  grid-template-rows: 1fr auto auto;
+  height: 542px;
+  border-radius: 20px 0 0 20px;
+  .tracker {
+    grid-row: 2 / 3;
+    img {
+      display: block;
+      position: absolute;
+      height: 113px;
+      left: 221px;
+      top: 18px;
+    }
+  }
+  .orderText {
+    grid-row: 3 / 4;
+  }
+  .orderText a {
+    margin: 2rem 0 4rem;
+  }
+}
+
+.details {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  width: 400px;
+  height: 542px;
+  border-radius: 0 20px 20px 0;
+}

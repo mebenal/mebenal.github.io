@@ -1,3 +1,6 @@
 @import "normalize";
 @import "variables-checkout";
 @import "small-checkout";
+@media only screen and (min-width: 800px) {
+  @import "medium-checkout";
+}
