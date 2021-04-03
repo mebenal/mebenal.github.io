@@ -641,38 +641,77 @@ img {
   font-size: .9rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 6fr 6fr 1fr 3fr;
-      grid-template-columns: 6fr 6fr 1fr 3fr;
+  -ms-grid-columns: 6fr 1fr 3fr;
+      grid-template-columns: 6fr 1fr 3fr;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
   width: 100%;
 }
 
+.details form fieldset p {
+  grid-column: 1 / -1;
+}
+
 .details form fieldset label {
   font-size: .8rem;
   font-weight: 600;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
 }
 
-.details form fieldset label:nth-child(2) {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-}
-
-.details form fieldset label:last-child {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-column: 4 / 5;
+.details form fieldset label input {
+  border-bottom: 0;
 }
 
 .details form fieldset .material-icons-outlined {
   font-size: 1rem;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.details form .checkbox {
+  display: inline;
+  font-size: .7rem;
+  margin-top: -.5rem;
+}
+
+.details form .checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+.details form .checkbox p {
+  vertical-align: text-top;
+  display: inline;
+  font-weight: 600;
+}
+
+.details form .monthYear {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  border-bottom: 2px solid #bfbfbf;
+  line-height: 1;
+  vertical-align: text-top;
+}
+
+.details form .monthYear label {
+  line-height: 0;
+}
+
+.details form .monthYear input {
+  border-bottom: 0;
+  width: 25%;
+}
+
+.details form .cvv {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  margin: 0;
+  border-bottom: 2px solid #bfbfbf;
 }

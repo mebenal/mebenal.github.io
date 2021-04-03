@@ -72,23 +72,26 @@
         <label for="credit-number">CARD NUMBER<br>
           <input name="credit-number" class="cc-number" type="tel" pattern="\d*" maxlength="19" placeholder="1234 5678 9012 3456">
         </label>
-        <fieldset>EXPRIATION DATE<br>
-          <label for="">MONTH
-            <input type="text">
-          </label>
-          <label for="">YEAR
-            <input type="text">
-          </label>
-          <label for="">CVV<span class="material-icons-outlined">help</span><br>
+        <fieldset>
+          <p>EXPRIATION DATE</p>
+          <span class='monthYear'>
+            <label for="">MONTH
+              <input type="text">
+            </label>
+            <label for="">YEAR
+              <input type="text">
+            </label>
+          </span>
+          <label class='cvv' for="">CVV<span class="material-icons-outlined">help</span><br>
             <input type="text">
           </label>
           </fieldset>
-        <label for="">
+        <label for="">BILLING ADDRESS
           <input type="text">
         </label>
-        <label for="">
-          <input type="text">
-        Same as shipping address</label>
+        <label for="" class='checkbox'>
+          <input type="checkbox">
+        <p>Same as shipping address</p></label>
       </form>
       <div class='nextCancel'>
         <button>NEXT</button>
