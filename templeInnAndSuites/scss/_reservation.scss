@@ -1,0 +1,73 @@
+.reservation {
+  max-width: 600px;
+  background-color: white;
+  padding-bottom: 2rem;
+  h2 {
+    margin: 0;
+    padding: 1rem;
+  }
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: $accent2;
+    fieldset {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 10px;
+      max-width: 300px;
+      margin: 0 auto;
+      label {
+        grid-column: 1 / -1;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        p {
+          font-size: 1.2rem;
+          font-weight: $bold;
+          margin: 0;
+        }
+        input, select {
+          width: 100%;
+          vertical-align: bottom;
+          background-color: $accent2;
+          border-bottom: 1px solid black;
+          font-size: 1.1rem;
+        }
+        input {
+          padding-bottom: 1px;
+        }
+        input:focus, textarea {
+          outline: none;
+        }
+        input:hover {
+          border-color: $accent1;
+          background-color: $secondary;
+          transition: .7s;
+        }
+        input::placeholder {
+          color: #00000099;
+        }
+        textarea {
+          width: 100%;
+          height: 5rem;
+          resize: none;
+        }
+      }
+      button {
+        grid-column: 1 / -1;
+        display: block;
+        background-color: $secondary;
+        font-weight: $bold;
+        margin: .75rem auto 0;
+        padding: .75rem 3rem;
+      }
+      label:nth-of-type(3), label:nth-of-type(5), label:nth-of-type(9) {
+        grid-column: 1 / 2;
+      }
+      label:nth-of-type(4), label:nth-of-type(6), label:nth-of-type(10) {
+        grid-column: 2 / 3;
+      }
+    }
+  }
+}
