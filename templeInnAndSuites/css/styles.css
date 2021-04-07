@@ -1721,14 +1721,19 @@ footer p {
   margin-bottom: .5rem;
 }
 
+.services section:nth-child(6) {
+  padding-bottom: 20px;
+}
+
 .services section:nth-child(6) div {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  padding: 1rem 0;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  padding: 0;
+  background-color: #afd4f1ff;
 }
 
 .services section:nth-child(6) div h3 {
@@ -1740,7 +1745,9 @@ footer p {
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   z-index: 2;
-  background-color: #afd4f1ff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .services section:nth-child(6) div img {
