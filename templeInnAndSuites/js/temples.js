@@ -1,10 +1,12 @@
 window.addEventListener('load', async () => {
   document.getElementById('hideMe').style.display = 'none';
   const { temples } = await (await fetch('temples.json')).json();
-  console.log(temples);
   const main = document.querySelector('.temple');
   temples.forEach(async element => {
     const templeDiv = document.createElement('div');
+    const locDiv = document.createElement('div');
+    const city = document.createElement('span');
+    const country = document.createElement('span');
     const name = document.createElement('h3');
     const status = document.createElement('p');
     const phone = document.createElement('p');
@@ -17,11 +19,6 @@ window.addEventListener('load', async () => {
     const closep = document.createElement('p');
     const milestones = document.createElement('div');
     const closures = document.createElement('div');
-
-    const urls = ['api.openweathermap.org/data/2.5/forecast', 'api.openweathermap.org/data/2.5/weather'];
-    const foreUrl = `https://${urls[1]}?q=${element.city.trim()},${element.country}&appid=b6d0fa991fc39022cc45370d3ebf179f&units=imperial`;
-    // const fore = await (await fetch(foreUrl)).json();
-    // console.log(fore);
 
     if (element.address === 'null') {
       element.address = 'No address';
@@ -36,6 +33,8 @@ window.addEventListener('load', async () => {
       element.img = 'images/image-not-found.svg';
     }
 
+    city.innerHTML = element.city;
+    country.innerHTML = element.country;
     name.innerHTML = element.name;
     status.innerHTML = `<strong>Temple Status:</strong> ${element.status}`;
     phone.innerHTML = `<strong>Phone:</strong> ${element.phone}`;
@@ -68,10 +67,35 @@ window.addEventListener('load', async () => {
       container.appendChild(closure);
       closures.appendChild(container);
     });
-    // temp.innerHTML = `<strong>Temperature:</strong> ${fore.main.temp}&deg;F`;
-    // wind.innerHTML = `<strong>Wind:</strong> ${fore.wind.speed}MPH`;
-    // forecast.innerHTML = `<strong>Forecast:</strong> ${fore.weather[0].description}`;
+    locDiv.classList.add('place');
+    locDiv.style.display = 'none';
+    const options = {
+      rootMargin: '0px',
+      threshold: 0,
+    };
 
+    const observer = new IntersectionObserver(async (entries, divObserver) => {
+      entries.forEach(async entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          const urls = ['api.openweathermap.org/data/2.5/forecast', 'api.openweathermap.org/data/2.5/weather'];
+          const container = entry.target;
+          const foreUrl = `https://${urls[1]}?q=${container.childNodes[0].childNodes[0].innerHTML.trim()},${container.childNodes[0].childNodes[1].innerHTML}&appid=fc4f5e0fad0b17189ec5504b1c45fdee&units=imperial`;
+          const fore = await (await fetch(foreUrl)).json();
+          container.childNodes[6].innerHTML = `<strong>Temperature:</strong> ${fore.main.temp}&deg;F`;
+          container.childNodes[7].innerHTML = `<strong>Wind:</strong> ${fore.wind.speed}MPH`;
+          container.childNodes[8].innerHTML = `<strong>Forecast:</strong> ${fore.weather[0].description}`;
+          divObserver.unobserve(entry.target);
+        }
+      });
+    }, options);
+    observer.observe(templeDiv);
+
+    locDiv.appendChild(city);
+    locDiv.appendChild(country);
+
+    templeDiv.appendChild(locDiv);
     templeDiv.appendChild(name);
     templeDiv.appendChild(img);
     templeDiv.appendChild(status);
