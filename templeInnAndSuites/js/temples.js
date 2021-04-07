@@ -23,6 +23,19 @@ window.addEventListener('load', async () => {
     const fore = await (await fetch(foreUrl)).json();
     console.log(fore);
 
+    if (element.address === 'null') {
+      element.address = 'No address';
+    }
+    if (element.phone === 'null') {
+      element.phone = 'No phone';
+    }
+    if (element.closures.length === 0) {
+      element.closures.push({ closure: 'No closures planned' });
+    }
+    if (element.img === 'null') {
+      element.img = 'images/image-not-found.svg';
+    }
+
     name.innerHTML = element.name;
     status.innerHTML = `<strong>Temple Status:</strong> ${element.status}`;
     phone.innerHTML = `<strong>Phone:</strong> ${element.phone}`;
@@ -58,7 +71,7 @@ window.addEventListener('load', async () => {
     temp.innerHTML = `<strong>Temperature:</strong> ${fore.main.temp}&deg;F`;
     wind.innerHTML = `<strong>Wind:</strong> ${fore.wind.speed}MPH`;
     forecast.innerHTML = `<strong>Forecast:</strong> ${fore.weather[0].description}`;
-
+    
     templeDiv.appendChild(name);
     templeDiv.appendChild(img);
     templeDiv.appendChild(status);
