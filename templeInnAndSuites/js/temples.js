@@ -71,7 +71,7 @@ window.addEventListener('load', async () => {
     temp.innerHTML = `<strong>Temperature:</strong> ${fore.main.temp}&deg;F`;
     wind.innerHTML = `<strong>Wind:</strong> ${fore.wind.speed}MPH`;
     forecast.innerHTML = `<strong>Forecast:</strong> ${fore.weather[0].description}`;
-    
+
     templeDiv.appendChild(name);
     templeDiv.appendChild(img);
     templeDiv.appendChild(status);
