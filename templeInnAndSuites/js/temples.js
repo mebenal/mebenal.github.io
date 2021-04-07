@@ -20,8 +20,8 @@ window.addEventListener('load', async () => {
 
     const urls = ['api.openweathermap.org/data/2.5/forecast', 'api.openweathermap.org/data/2.5/weather'];
     const foreUrl = `https://${urls[1]}?q=${element.city.trim()},${element.country}&appid=b6d0fa991fc39022cc45370d3ebf179f&units=imperial`;
-    const fore = await (await fetch(foreUrl)).json();
-    console.log(fore);
+    // const fore = await (await fetch(foreUrl)).json();
+    // console.log(fore);
 
     if (element.address === 'null') {
       element.address = 'No address';
@@ -68,9 +68,9 @@ window.addEventListener('load', async () => {
       container.appendChild(closure);
       closures.appendChild(container);
     });
-    temp.innerHTML = `<strong>Temperature:</strong> ${fore.main.temp}&deg;F`;
-    wind.innerHTML = `<strong>Wind:</strong> ${fore.wind.speed}MPH`;
-    forecast.innerHTML = `<strong>Forecast:</strong> ${fore.weather[0].description}`;
+    // temp.innerHTML = `<strong>Temperature:</strong> ${fore.main.temp}&deg;F`;
+    // wind.innerHTML = `<strong>Wind:</strong> ${fore.wind.speed}MPH`;
+    // forecast.innerHTML = `<strong>Forecast:</strong> ${fore.weather[0].description}`;
 
     templeDiv.appendChild(name);
     templeDiv.appendChild(img);
